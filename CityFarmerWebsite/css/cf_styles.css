@@ -1,0 +1,63 @@
+/* Emma Wood, 10-30-2020 */
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('../fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#outerwrapper {
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.floatleft { 
+    float: left;
+    margin-right: 3%;
+}
+
+.floatright {
+    float: right;
+    margin-left: 3%;
+}
+
+main, footer { 
+    clear: both;
+}
+
+/* STUFF I ADDED */
+body {
+    background-color: #B8D1EB;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+}
+main {
+    background-color: #C5A98B;
+    padding: 10px;
+}
+.remove { /* This removes the bullet points from the nav */
+    list-style-type: none;
+}
+h1 {
+    font-family: 'Righteous', cursive, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+h2 {
+    font-family: quicksandregular, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-style: italic;
+    font-weight: bold;
+}
+.tomato {
+    list-style-image: url('../images/tomato2.0.png');
+}
+footer {
+    font-size: .75em;
+    text-align: center;
+    background: khaki;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
