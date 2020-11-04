@@ -1,0 +1,88 @@
+/* Style sheet created by: Emma Wood, 11-4-2020 */
+
+/* Style for body specifies a background color */
+body {
+	background-color: #FFFFFF;
+}
+
+/* Style for the container element */
+#container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Style for the header element */
+header {
+	font-family: Verdana, Arial, sans-serif;
+	background-color: #FFFFFF;
+	color: #4E9657;
+	padding: 0.5%;
+	margin-left: 1%;
+	font-size: 3em;
+}
+
+/* Style for the nav element */
+nav {
+	padding: 0.5%;
+}
+
+/* Style for the nav list item elements */
+nav li {
+	display: inline;
+}
+
+/* Style for the nav links element */
+nav li a {
+	color: #4E9657;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-decoration: none;
+}
+/* Style for the table */
+table{
+  width: 100%;
+}
+td, th {
+	border: 1px solid black;
+}
+
+/* STUFF I ADDED MYSELF */
+
+main {
+	padding: 1em;
+	background-color:#4E9657;
+}
+section {
+	background-color: white;
+	color: #4E9657;
+	padding: 1em;
+	margin-top: 1px;
+}
+article {
+	color: black;
+	border-top: thin;
+	padding: 1em;
+	margin-top: 1px;
+}
+h3 {
+	margin-bottom: 1px;
+	margin-top: 0px;
+}
+hr {
+	height: 1px;
+	background-color: black;
+}
+aside {
+	background-color: #4E9657;
+	text-align: center;
+	font-size: x-large;
+	color: white;
+	padding: 1em;
+	margin-top: 1px;
+	border-radius: 50px;
+}
+footer {
+	text-align: center;
+	font-size: .70em;
+}
