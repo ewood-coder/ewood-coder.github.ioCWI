@@ -1,0 +1,143 @@
+
+/* Created by Emma Wood, 11-1-2020 through 11-12-2020 */
+
+
+/* KEEP ALL OF THIS FOR EVERY CSS PAGE */
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('greatvibes-regular-webfont.woff2') format('woff2'),
+         url('greatvibes-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.topnav {
+    list-style-type: none;
+    display: inline;
+    padding: 45px;
+    font-size: 24px;
+}
+.navtop /* Makes the navigation bar centered */ {
+    text-align: center;
+    color: rgb(199, 245, 129);
+}
+.topnav a:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(1, 192, 199);
+    border: rgb(230, 230, 230);
+    /* padding: 15px 15px 15px 15px; */
+    text-decoration: none;
+}
+.topnav a:active {
+    background-color: rgb(230, 230, 230);
+    color: rgb(5, 98, 219);
+    border: rgb(230, 230, 230);
+    text-decoration: none;
+}
+a:link {
+    color: rgb(199, 245, 129);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(199, 245, 129);
+    text-decoration: none;
+}
+footer a:link {
+    color: rgb(5, 98, 219);
+}
+footer a:visited {
+    color: rgb(5, 98, 219);
+}
+body {
+    font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+header {
+    background-color: rgb(175, 171, 171);
+    padding: 15px;
+    height: 70px;
+}
+footer {
+    text-align: center;
+    background-color: rgb(175, 171, 171);
+    padding: 15px;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+main {
+    padding: 40px;
+    background-color:rgb(199, 245, 129);
+}
+.gitHub {
+    float: left;
+}
+.linkedIn {
+    float: right;
+}
+
+#container {
+    position: relative;
+    height: 5px;
+    width: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+#siteLogo {
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/* END OF RE-USABLE CODE FOR EACH PAGE */
+
+/* CODE SPECIFICALLY FOR home.html */
+main h2{
+    text-align: center;
+}
+main h1 {
+    text-align: center;
+    padding-top: 15px;
+}
+main p {
+    font-size: 18px;
+}
+.intro {
+    text-align: center;
+    border-style: solid;
+    padding: 10px 10px 10px 10px;
+    margin-top: 0;
+    background-color: white;
+
+    border-color: rgb(85, 218, 218);
+    border-style: groove;
+    border-width: 10px;
+    border-top: none;
+}
+.greeting {
+    text-align: center;
+    border-style: solid;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 0;
+    margin-top: 1px;
+    background-color: white;
+    font-size: 60px;
+    font-family: 'great_vibesregular', 'Roboto', sans-serif, 'Times New Roman', Times, serif;
+    
+    border-color: rgb(85, 218, 218);
+    border-style: groove;
+    border-width: 10px;
+    border-bottom: none;
+}
+.me {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: solid;
+    border-width: 10px;
+    border-color: rgb(175, 171, 171);;
+    /* border-image-source: linear-gradient(to bottom, rgb(85, 218, 218), rgb(175, 171, 171)); */
+}
+.FixMargin {
+    margin-top: 15px;
+}

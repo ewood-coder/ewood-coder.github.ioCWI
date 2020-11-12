@@ -1,0 +1,141 @@
+
+/* Created by Emma Wood, 11-1-2020 through 11-12-2020 */
+
+
+/* KEEP ALL OF THIS FOR EVERY CSS PAGE */
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('greatvibes-regular-webfont.woff2') format('woff2'),
+         url('greatvibes-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.topnav {
+    display: inline;
+    list-style-type: none;
+    padding: 45px;
+    font-size: 24px;
+}
+.navtop /* Makes the navigation bar centered */ {
+    text-align: center;
+    color: rgb(199, 245, 129);
+}
+.topnav a:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(1, 192, 199);
+    border: rgb(230, 230, 230);
+    /* padding: 15px 15px 15px 15px; */
+    text-decoration: none;
+}
+.topnav a:active {
+    background-color: rgb(230, 230, 230);
+    color: rgb(5, 98, 219);
+    border: rgb(230, 230, 230);
+    text-decoration: none;
+}
+a:link {
+    color: rgb(199, 245, 129);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(199, 245, 129);
+    text-decoration: none;
+}
+footer a:link {
+    color: rgb(5, 98, 219);
+}
+footer a:visited {
+    color: rgb(5, 98, 219);
+}
+body {
+    font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+header {
+    background-color: rgb(175, 171, 171);
+    padding: 15px;
+    height: 70px;
+}
+footer {
+    text-align: center;
+    background-color: rgb(175, 171, 171);
+    padding: 15px;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+main {
+    padding: 40px;
+    background-color:rgb(199, 245, 129);
+    min-height: 73vh;
+}
+.gitHub {
+    float: left;
+}
+.linkedIn {
+    float: right;
+}
+
+#container {
+    position: relative;
+    height: 5px;
+    width: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+#siteLogo {
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/* END OF RE-USABLE CODE FOR EACH PAGE */
+
+#section1 {
+    margin-top: 140px;
+    text-align: center;
+    border-style: solid;
+    margin-bottom: 0;
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+    background-color: rgb(224, 217, 217);
+    border-color: rgb(85, 218, 218);
+    border-width: 5px;
+}
+#section2 {
+    margin-top: 10px;
+    text-align: center;
+    border-style: solid;
+    margin-bottom: 0;
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+    background-color: rgb(224, 217, 217);
+    border-color: rgb(85, 218, 218);
+    border-width: 5px;
+}
+#section3 {
+    margin-top: 10px;
+    text-align: center;
+    border-style: solid;
+    margin-bottom: 0;
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+    background-color: rgb(224, 217, 217);
+    border-color: rgb(85, 218, 218);
+    border-width: 5px;
+}
+
+main p {
+    font-size: 18px;
+}
+.boise {
+    position: absolute;
+    top: 6.2em;
+    left: 0;
+    height: 170px;
+}
+.cwi {
+    position: absolute;
+    top: 6.2em;
+    right: 0;
+}

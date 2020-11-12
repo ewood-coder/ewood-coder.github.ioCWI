@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Created by Emma Wood 
+     11-1-2020 through 11-12-2020 -->
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="images/Icon.svg"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/contactAndfeedback.css" type="text/css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="description" content="This is my contact and feedback page where you can contact me and give feedback.">
+    <meta name="keywords" content="Information, HTML, Software Design, CSS, Student">
+    <meta name="author" content="Emma Wood">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Feedback</title>
+</head>
+<body>
+    <header>
+        <nav class="navtop">
+            <div id="container">
+                <a href="home.html">
+                <img id="siteLogo" src="images/siteLogo.png" alt="Picture of Site Logo"></a>
+            </div>
+            <ul>
+                <li class="topnav"><a href="home.html">Home</a></li>
+                <li class="topnav"><a href="about.html">About</a></li>
+                <li class="topnav"><a href="experience.html">Experience</a></li>
+                <li class="topnav"><a href="contactAndfeedback.html">Contact/Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Want to contact me or leave feedback?<br>
+            <b>&#8595;</b>&nbsp;&nbsp;&nbsp; Enter your information below &nbsp;&nbsp;&nbsp;<b>&#8595;</b>
+        </h1>
+
+        <form class="form" action="mailto:emmawood@my.cwi.edu"
+            method="POST"
+            enctype="text/plain"
+            name="EmailForm">
+            <fieldset>
+                <h3 class="radioTitle">
+                    <u>How did you hear about me?</u>
+                </h3><br>
+                <p class ="radiobuttons">
+                    <input type="radio" name="HearAbout " value="Indeed"> Indeed
+                    <input type="radio" name="HearAbout " value="LinkedIn"> LinkedIn
+                    <input type="radio" name="HearAbout " value="GitHub"> GitHub
+                    <input type="radio" name="HearAbout " value="CWI Software Development Corporate Partner"> CWI Software Development Corporate Partner
+                </p>
+            
+                First Name:&nbsp;&nbsp;
+                <input type="text" size="30" name="First Name "><br><br>
+                Last Name:&nbsp;&nbsp;
+                <input type="text" size="30" name="Last Name "><br><br>
+                Email:&nbsp;&nbsp;
+                <input id="changeDistance" type="text" size="30" name="Email "><br><br>
+                Phone #:&nbsp;&nbsp;
+                <input id="changeDistance2" type="text" size="30" name="Phone "><br><br>
+                
+                <h4>
+                    <span>
+                        <u>What type of postition would you like to hire me as? (NOT required)</u>
+                    </span>
+                </h4>
+                <select id="myList" name="Hire Type ">
+                    <optgroup label="Postition Type:">
+                        <option value = "N/A">N/A</option>
+                        <option value = "Part-time">Part-time</option>
+                        <option value = "Full-time">Full-time</option>
+                        <option value = "Contract">Contract</option>
+                        <option value = "Temporary">Temporary</option>
+                        <option value = "On call">On call</option>
+                    </optgroup>
+                </select><br>
+
+                Message:<br> 
+                <textarea name="Message " rows="10" cols="100"></textarea><br><br>
+                <input class="submit" type="submit" value="Submit">
+                <input class="reset" type="reset">
+            </fieldset>
+        </form>
+    </main>
+    
+    <footer>
+        <a href="https://github.com/" target="_blank"><img class="gitHub" src="images/gitHub.png" alt="GitHub Link"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img class="linkedIn" src="images/linkedIn.png" alt="LinkedIn Link"></a>
+        Email: <a href="mailto:emmawood@my.cwi.edu">emmawood@my.cwi.edu</a><br>
+        Phone: <a href="tel:+12089082162">(208)-908-2162</a><br>
+        Boise, Idaho 83709
+    </footer>
+</body>
+</html>
