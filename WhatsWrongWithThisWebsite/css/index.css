@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* Created by: Emma Wood  11-19-2020 */
+
+/* IMBEDDED HTML STYLE SHEET */
+.bar { 
+    background-color: #152420; 
+}
+main { 
+    background-image: url(../images/heroback.jpg);
+    background-repeat: no-repeat;
+}
+/* END */
+
+
+/* ===============================
+Mobile Styles: 640px and lower
+=============================== */
+@media only screen and (max-width: 641px) {
+    nav > ul > li {
+        display: block;
+    }
+    h1, #br {
+        display: none;
+    }
+    body {
+        background-image: linear-gradient(to bottom, #2a9ff8, white);
+        background-repeat: no-repeat;
+    }
+    main, footer {
+        background: transparent;
+    }
+    hr {
+        display: inherit;
+    }
+ }
+
+/* DESKTOP/TABLET STYLES */
+nav > ul > li {
+    list-style-type: none;
+    display: inline;
+}
+nav {
+    background-color: #152420;
+}
+hr {
+    display: inherit;
+}
