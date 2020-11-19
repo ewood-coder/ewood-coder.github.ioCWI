@@ -1,45 +1,50 @@
 @charset "utf-8";
 /* Created by: Emma Wood  11-19-2020 */
 
-/* IMBEDDED HTML STYLE SHEET */
-.bar { 
-    background-color: #152420; 
-}
-main { 
-    background-image: url(../images/heroback.jpg);
-    background-repeat: no-repeat;
-}
-/* END */
-
 nav > ul > li {
-    list-style-type: none;
-    display: inline;
+    display: block;
 }
 nav {
-    background-color: #152420;
+    background-color: #152420; 
+}
+h1 {
+    display: none;
+}
+body {
+    background-image: linear-gradient( #2a9ff8, white);
+    background-repeat: no-repeat;
+}
+main, footer {
+    background: transparent;
 }
 hr {
     display: inherit;
-}
+} 
+/*Imbedded Style Sheet*/
 
-/* ===============================
-Mobile Styles: 640px and lower
-=============================== */
-@media only screen and (max-width: 641px) {
-    nav > ul > li {
-        display: block;
+/* ===========================
+        Desktop Styles:
+ ============================= */
+@media only screen and (min-width: 640px) {
+    .bar { 
+        background-color: #152420; 
     }
-    h1, #br {
-        display: none;
-    }
-    body {
-        background-image: linear-gradient(to bottom, #2a9ff8, white);
+    main { 
+        background-image: url(../images/heroback.jpg); 
         background-repeat: no-repeat;
     }
-    main, footer {
-        background: transparent;
+    
+    nav > ul > li {
+        list-style-type: none;
+        display: inline;
     }
-    hr {
-        display: inherit;
+    nav {
+        background-color: #152420; 
+    }
+    body {
+        background: white;
+    }
+    h1 {
+        display: inline;
     }
 }
