@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    color: red;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    display: inline;
+}
+nav {
+    background-color: #152420;
+}
