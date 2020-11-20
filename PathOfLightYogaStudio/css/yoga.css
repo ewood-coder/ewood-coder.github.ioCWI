@@ -1,0 +1,88 @@
+/* Emma Wood 11-20-2020 */
+
+body { 
+	background-color: #F5F5F5;
+    color: #3F2860;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+header { 
+	background-color: #9BC1C2; 
+    background-image: url(../images/lilyheader.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+h1 { 
+	text-indent: 1em;
+    line-height: 400%; 
+}
+
+nav { 
+	font-weight: bold;
+}
+nav > ul > li {
+	list-style-type: none;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 45px;
+	margin-left: -40px;
+}
+nav > ul {
+	margin: 0px;
+}
+
+footer { 
+	background-color: #9BC1C2; 
+    font-size: small;
+	text-align: center;
+	font-style: italic;
+	padding: .5em;
+}
+address {
+	margin-bottom: .5em;
+}
+.mainLI {
+	margin-left: 3em;
+	list-style-image: url(../images/yogabullet.png);
+}
+.schedule {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+	margin-bottom: .5em;
+}
+table > tbody > tr > td {
+	border: 1px solid black;
+	text-align: center;
+}
+#alignRight {
+	float: right;
+}
+
+
+
+/* ===========================
+        Mobile Styles:
+ ============================= */
+@media only screen and (max-width: 641px) {
+    nav > ul > li {
+		display: block;
+		padding: 0px;
+		margin-left: -40px;
+	}
+	header {
+		background-image: none;
+	}
+	body {
+		background-image: url(../images/yogamobile.png);
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+	.hideMobile {
+		display: none;
+	}
+}
