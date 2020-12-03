@@ -1,0 +1,71 @@
+/*
+Team Members: Emma Wood & Jacob Westphal
+Date: 12-3-2020
+File Name: styles.css
+*/
+
+.bg-red {
+    background-color: #780001;
+}
+
+.bg-light-blue {
+     background-color: #ccd5e6;   
+}
+
+
+
+/* STUFF I ADDED */
+header {
+    width: 100%;
+}
+footer {
+    width: 100%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+td, th {
+    border: 1px #dddddd;
+    text-align: left;
+    padding: 20px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.bg-grey {
+    background-color: rgb(228, 227, 227);
+}
+.width1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.cwi {
+    color: white;
+}
+
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media (min-width: 768px) {  
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
