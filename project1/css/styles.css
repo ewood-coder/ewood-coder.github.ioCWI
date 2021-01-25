@@ -1,0 +1,221 @@
+/* Emma Wood 
+   1-18-2021 
+   File Name: styles.css
+*/
+
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('greatvibes-regular-webfont.woff2') format('woff2'),
+         url('greatvibes-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+html {
+    background: url("../images/background9.png");
+}
+
+
+/*=============================
+        HEADER & FOOTER 
+===============================*/
+header {
+    width: 100%;
+}
+
+.header {
+    background: rgb(16, 115, 243) /* rgb(5, 98, 219) */
+}
+footer {
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    
+    width:100%;
+    height: 100px;
+}
+#footer {
+    color: white;
+}
+#logo {
+    padding-left: 10px;
+    position: absolute;
+}
+#timeDate {
+    color: white;
+    font-size: 30px;
+    
+    position: absolute;
+    top: 40px;
+    left: 1700px;
+}
+
+
+/*============================= 
+            NAVBAR 
+===============================*/
+nav > ul> li {
+    display: inline;
+
+    padding: 30px;
+    word-spacing: 100px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+    list-style: none;
+}
+nav {
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    line-height: 150px;
+    
+    vertical-align: middle;
+}
+nav > ul {
+    margin: 0;
+    padding-left: 0px;
+}
+
+nav > ul > li > a:hover {
+    padding: 15px;
+    background-color: rgb(0, 225, 255);
+    text-decoration: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+nav > ul > li > a:active {
+    background-color: rgb(230, 230, 230);
+    color: rgb(255, 255, 255);
+    border: rgb(230, 230, 230);
+    text-decoration: none;
+}
+nav > ul > li > a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a:link {
+    color: rgb(255, 255, 255);
+}
+nav > ul > li> a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/*===============================
+            TEXT BOXES 
+ ================================*/
+.boxes {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    text-align: center;
+    border-style: solid;
+
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(16, 115, 243);
+    border-width: 5px;
+}
+#boxes1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    border-style: solid;
+
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(16, 115, 243);
+    border-width: 5px;
+}
+#noUnderline {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    text-align: center;
+    border-style: solid;
+
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(16, 115, 243);
+    border-width: 5px;
+
+    background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+}
+section > ul > li {
+    list-style: none;
+    font-size: 50px;
+}
+#insurances {
+    font-size: 30px;
+}
+.textboxFontSize {
+    font-size: 25px;
+}
+.doctorShannon {
+    float: left;
+}
+#textCenter {
+    text-align: center;
+}
+
+/*=============================
+        COLORED SECTIONS
+===============================*/
+.blueBack {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    text-align: center;
+    border-style: solid;
+
+    padding: 15px 15px 15px 15px;
+    padding-top: 3px;
+
+    background-color: rgb(16, 115, 243);
+    border-color: rgb(255, 255, 255);
+    border-width: 5px;
+
+    color: white;
+}
+#shannon {
+    width: 75%;
+    /* float: right; */
+    position: absolute;
+    left: 350px;
+    top: 1050px;
+}
+
+/*===============================
+            FOOTER LOGOS 
+ ================================*/
+.facebook {
+    float: left;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+.twitter {
+    float: right;
+    padding-right: 50px;
+    padding-top: 15px;
+}
