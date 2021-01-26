@@ -2,11 +2,14 @@
 
 const $ = selector => document.querySelector(selector);
 
-/* be sure that a different error message is displayed for a text 
-box if it contains nonnumeric data versus if it contains a value 
-less than or equal to zero.  */
-const getNumericErrorMsg = lbl => `${lbl} must be a valid number.`;
-const getRangeErrorMsg = lbl => `${lbl} must be greater than zero.`;
+const isInvalidValue = val => { 
+    if (isNaN(val)) {
+        console.error("Value is not a number");
+    } else if (val <= 0) {
+        console.error(`Value ${val} is not greater than zero.`);
+    }
+    return isNaN(val) || val <= 0
+};
 
 const focusAndSelect = selector => {
     const elem = $(selector);
@@ -15,72 +18,39 @@ const focusAndSelect = selector => {
 };
 
 const processEntries = () => {
+    console.log("processEntries function has started");
+
+    // clear previous calculation
+    $("#mpg").value = "";
+
     const miles = parseFloat($("#miles").value);
     const gallons = parseFloat($("#gallons").value);
+    console.log("miles = " + miles);
+    console.log("gallons = " + gallons);
 
-    /* Modify the if-else statement that provides the data 
-       validation so a different error message is displayed 
-       for each entry  */
-    if (isNaN(miles)) {
-        alert(getNumericErrorMsg("Miles driven"));
-        focusAndSelect("#miles");
-    } else if (miles <= 0) {
-        alert(getRangeErrorMsg("Miles driven"));
-        focusAndSelect("#miles");
-    }
-    else if (isNaN(gallons)) {
-        alert(getNumericErrorMsg("Gallons of gas used"));
-        focusAndSelect("#gallons");
-    } else if (gallons <= 0) {
-        alert(getRangeErrorMsg("Gallons of gas used"));
-        focusAndSelect("#gallons");
-    }
-    else {
-        $("#mpg").value = (miles / gallons).toFixed(2);
+    let errorMessage = "";
+
+    if (isInvalidValue(miles)) {
+        errorMessage += "Miles driven must be a valid number greater than zero.\n";
+        focusAndSelect("#miles");        
     }
     
-    /*=============================
-        In Case Code Above Breaks
-    ===============================*/
-
-   /* if (isNaN(miles) || miles <= 0) {
-        alert(getErrorMsg("Miles driven"));
-        focusAndSelect("#miles");
-    } else if (isNaN(gallons) || gallons <= 0) {
-        alert(getErrorMsg("Gallons of gas used"));
+    if (isInvalidValue(gallons)) {
+        errorMessage += "Gallons of gas used must be a valid number greater than zero.";
         focusAndSelect("#gallons");
+    }
+    
+    if (errorMessage == "") {
+        console.log("The data is valid and the calculation is next");
+        const mpg = miles / gallons;
+        console.log("mpg = " + mpg);
+        $("#mpg").value = mpg.toFixed(2);
     } else {
-        $("#mpg").value = (miles / gallons).toFixed(2);
-    } */
+        alert(errorMessage);
+    }
 };
 
-/* Add an arrow function named clearEntries() that clears the entries  */
-const clearEntries = () => {
-    $("#miles").value = "";
-    $("#gallons").value = "";
-    $("#mpg").value = "";
-    $("#miles").focus();
-}
-
-/* 1) Next, add a statement in the DOMContentLoaded event 
-      handler that attaches the clearEntries() function to the 
-      click event of the Clear Entries button.  
-   2) Add a statement to the DOMContentLoaded event handler that 
-      attaches the clearEntries() function to the double-click event 
-      of the miles text box.  */
-
 document.addEventListener("DOMContentLoaded", () => {
     $("#calculate").addEventListener("click", processEntries);
-    $("#clear").addEventListener("click", clearEntries);
-    $("#miles").addEventListener("dblclick", clearEntries);
     $("#miles").focus();
 });
-
-
-/*=============================
-    In Case Code Above Breaks
-===============================
-document.addEventListener("DOMContentLoaded", () => {
-    $("#calculate").addEventListener("click", processEntries);
-    $("#miles").focus();
-}); */
