@@ -4,35 +4,49 @@ document.addEventListener("DOMContentLoaded", () => {
     
     $("#join_list").addEventListener("click", () => {
         // get values user entered in textboxes
-        const email1 = $("#email_1").value;
-        const email2 = $("#email_2").value;
-        const firstName = $("#first_name").value;
+        const email1 = $("#email_1");
+        const email2 = $("#email_2");
+        const firstName = $("#first_name");
     
-        // create an error message and set it to an empty string
-        let errorMessage = "";
+        /* Use a Boolean variable to keep track of 
+           whether any entries are invalid.  */
+           let isValid = true;
 
         // check user entries - add text to error message if invalid
-        if (email1 == "") { 
-            errorMessage += "First email is required.\n";
+        /* Enhance the data validation so it displays the error messages 
+           in the span elements. */
+        if (email1.value == "") {
+            email1.nextElementSibling.textContent = "This field is required.";
+            isValid = false; 
+        } 
+        else {
+            email1.nextElementSibling.textContent = "";
         }
-    
-        if (email2 == "") { 
-            errorMessage += "Second email is required.\n";
+        /*=======================================================================*/
+        if (email2.value == "") { 
+            email2.nextElementSibling.textContent = "This field is required.";
+            isValid = false; 
+        } 
+        else {
+            email2.nextElementSibling.textContent = "";
         }
-    
-        if (email1 != email2) { 
-            errorMessage += "Both emails must match.\n";
+        /*=======================================================================*/
+        if (email1.value != email2.value) { 
+            email2.nextElementSibling.textContent = "Email addresses must match.";
+            isValid = false; 
         }
-    
-        if (firstName == "") {
-            errorMessage += "First name is required.\n";
+        /*=======================================================================*/
+        if (firstName.value == "") {
+            firstName.nextElementSibling.textContent = "First name is required.";
+            isValid = false;
+        } 
+        else {
+            firstName.nextElementSibling.textContent = "";
         }
-    
-        // submit the form if error message is an empty string
-        if (errorMessage == "") {
+
+        /* if all of the entries are valid, you can submit the form. */
+        if (isValid) {
             $("#email_form").submit();
-        } else {
-            alert(errorMessage);            
         }
     });
 
