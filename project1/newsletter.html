@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dentlytical Solutions | Newsletter</title> <!-- This is an original name (used name generator) -->
+    <meta content="Proud to offer the highest level of dental care to our community." name="description">
+    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <meta name="author" content="Emma Wood">
+
+    <!-- CSS File -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JavaScript File -->
+    <script src="js/clock.js" defer></script>
+    <script src="js/email_list.js" defer></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/tooth.png"/>
+    <!-- Favicon taken from images on Google:
+         Dentist in Santa Monica | Drake Dental -->
+
+    <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
+        gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
+        K5i4aAhUfEALw_wcB  -->
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <p id="logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            </p>
+            <div id="timeDate"></div>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="boxes1">
+            <h1 class="h11"><u>Join our newsletter!</u></h1>
+            <!-- BEGIN FORM -->
+            <form id="email_form" name="email_form" 
+                action="thankYou.html" method="get">
+                <div class="paddingLeft">
+                    <label for="email_1"><b>Email Address:</b></label><br>
+                    <input type="text" id="email_1" name="email_1">
+                    <br><span class="redImportant" id="email_1_error">*</span>
+                </div><br>
+                
+                <div class="paddingLeft">
+                    <label for="email_2"><b>Confirm Email Address:</b></label><br>
+                    <input type="text" id="email_2" name="email_2">
+                    <br><span class="redImportant" id="email_2_error">*</span>
+                </div><br>
+                
+                <div class="paddingLeft">
+                    <label for="first_name"><b>First Name:</b></label><br>
+                    <input type="text" id="first_name" name="first_name">
+                    <br><span class="redImportant" id="first_name_error">*</span>
+                </div><br>
+                
+                <div class="paddingLeft">
+                    <br><label>&nbsp;</label>
+                    <input type="button" id="clear_form" class="resetButton" value="Clear Form">
+                    <input type="submit" id="join_list" class="submit" value="Join List">
+                </div>
+            </form>
+            <!-- END FORM -->
+
+            <section class="blueBack">
+                <h1 class="h11"><u>The information in our newsletter includes the following:</u></h1>
+                <ul>
+                    <li class="leftWall" class="textboxFontSize">- Changes to our facility and when they happen.</li><br>
+                    <li class="leftWall" class="textboxFontSize">- Recommended dental products.</li><br>
+                    <li class="leftWall" class="textboxFontSize">- Updates on when our facilities close/open for holidays and other events.</li><br>
+                    <li class="leftWall" class="textboxFontSize">- Employment opportunities.</li><br>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
+        <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
+        <p>
+            &#169; 2021 Dentlytical Solutions<br>
+            Email: <a href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
+            Phone: <a href="tel:+12088545633">(208)-854-5633</a><br>
+            6841 Ridgetop Way, Boise, Idaho 83709
+        </p>
+    </footer>
+</body>
+</html>

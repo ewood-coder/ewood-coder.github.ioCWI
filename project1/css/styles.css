@@ -4,218 +4,1344 @@
 */
 
 @font-face {
-    font-family: 'great_vibesregular';
-    src: url('greatvibes-regular-webfont.woff2') format('woff2'),
-         url('greatvibes-regular-webfont.woff') format('woff');
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
-body {
-    margin: 0;
-}
-html {
-    background: url("../images/background9.png");
-}
-
-
-/*=============================
-        HEADER & FOOTER 
-===============================*/
-header {
-    width: 100%;
-}
-
-.header {
-    background: rgb(16, 115, 243) /* rgb(5, 98, 219) */
-}
-footer {
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    
-    width:100%;
-    height: 100px;
-}
-#footer {
-    color: white;
-}
-#logo {
-    padding-left: 10px;
-    position: absolute;
-}
-#timeDate {
-    color: white;
-    font-size: 30px;
-    
-    position: absolute;
-    top: 40px;
-    left: 1700px;
-}
-
-
-/*============================= 
-            NAVBAR 
-===============================*/
-nav > ul> li {
-    display: inline;
-
-    padding: 30px;
-    word-spacing: 100px;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 200%;
-    list-style: none;
-}
-nav {
-    text-align: center;
-    height: 150px;
-    width: 100%;
-    line-height: 150px;
-    
-    vertical-align: middle;
-}
-nav > ul {
-    margin: 0;
-    padding-left: 0px;
-}
-
-nav > ul > li > a:hover {
-    padding: 15px;
-    background-color: rgb(0, 225, 255);
-    text-decoration: none;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-}
-nav > ul > li > a:active {
-    background-color: rgb(230, 230, 230);
-    color: rgb(255, 255, 255);
-    border: rgb(230, 230, 230);
-    text-decoration: none;
-}
-nav > ul > li > a:link {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-a:link {
-    color: rgb(255, 255, 255);
-}
-nav > ul > li> a:visited {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-
-/*===============================
-            TEXT BOXES 
- ================================*/
-.boxes {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    text-align: center;
-    border-style: solid;
-
-    padding: 15px 15px 15px 15px;
-    padding-top: 3px;
-
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(16, 115, 243);
-    border-width: 5px;
-}
-#boxes1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    border-style: solid;
-
-    padding: 15px 15px 15px 15px;
-    padding-top: 3px;
-
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(16, 115, 243);
-    border-width: 5px;
-}
-#noUnderline {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    text-align: center;
-    border-style: solid;
-
-    padding: 15px 15px 15px 15px;
-    padding-top: 3px;
-
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(16, 115, 243);
-    border-width: 5px;
-
-    background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
-}
-section > ul > li {
-    list-style: none;
-    font-size: 50px;
-}
-#insurances {
-    font-size: 30px;
-}
-.textboxFontSize {
-    font-size: 25px;
-}
-.doctorShannon {
-    float: left;
-}
-#textCenter {
-    text-align: center;
-}
-
-/*=============================
-        COLORED SECTIONS
-===============================*/
-.blueBack {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    text-align: center;
-    border-style: solid;
-
-    padding: 15px 15px 15px 15px;
-    padding-top: 3px;
-
+@media only screen and (min-width: 725px) {
+    /*=====================================================
+                        HAMBURGER MENU
+    =======================================================*/
+    .topnav {
+    overflow: hidden;
     background-color: rgb(16, 115, 243);
-    border-color: rgb(255, 255, 255);
-    border-width: 5px;
+    position: relative;
+    font-family: 'robotoregular', Arial, sans-serif;
+    }
 
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+    display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav a {
     color: white;
-}
-#shannon {
-    width: 75%;
-    /* float: right; */
+    padding: 14px 17px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    }
+    a.icon {
+    color: rgb(16, 115, 243);
+    padding: 60px 60px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+    background: rgb(16, 115, 243);
+    display: block;
     position: absolute;
-    left: 350px;
-    top: 1050px;
+    right: 0;
+    top: 0;
+    padding-bottom: 61px;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+    background-color: white;
+    color: rgb(16, 115, 243);
+    }
+    a.active {
+    padding: 60px 60px;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+    background-color: rgb(16, 115, 243);
+    color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+    a:link {
+        color: rgb(255, 255, 255);
+    }
+
+    #hideOnDesktop {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+
+
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 100px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 30px;
+    
+        position: absolute;
+        top: 40px;
+        margin-left: 430px;
+        margin-top: 30px;
+    }
+
+    /*===============================
+                TEXT BOXES 
+    ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 50px;
+        margin-top: 5px;
+    }
+    #offer {
+        text-align: center;
+        font-size: xx-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: xx-large;
+    }
+    .insurances {
+        font-size: 30px;
+    }
+    .textboxFontSize {
+        font-size: 25px;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 20px;
+    }
+    #doctorShannon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #doctorShannonMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+
+        color: white;
+    }
+
+
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: rgb(231, 231, 231);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-size: x-large;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active > .accordion:hover {
+        background-color: rgb(231, 231, 231);
+    }
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        font-size: large;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    }
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    .blueBack2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+
+        color: white;
+    }
+
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        margin-left: 475px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .textBoxes {
+        padding-left: 590px;
+    }
+    #textArea {
+        min-width: 51%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+        padding-left: 591px;
+    }
+    #textboxFontSize2 {
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+        padding-left: 591px;
+    }
+    #map {
+        padding: 30px 10px 10px 10px;
+        border:0;
+    }
+
+
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .paddingLeft {
+        text-align: center;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #join_list {
+        margin-right: 30px;
+    }
+    .redImportant {
+        color: red;
+    }
+    #newsletterInfo {
+        font-size: x-large;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .leftWall {
+        text-align: center;
+        font-size: x-large;
+    }
+    /*========================================
+                THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+
+
+    /*========================================
+                    FOOTER LOGOS 
+    =========================================*/
+    .facebook {
+        float: left;
+        padding-top: 15px;
+        padding-left: 50px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 50px;
+        padding-top: 15px;
+    }
 }
 
-/*===============================
-            FOOTER LOGOS 
- ================================*/
-.facebook {
-    float: left;
-    padding-top: 15px;
-    padding-left: 50px;
+
+
+
+
+
+
+
+
+/*======================================================================================*/
+
+
+
+
+
+
+
+
+
+
+/*==================================
+            TABLET STYLING
+====================================*/
+
+
+@media only screen and (max-width: 724px) and (min-width: 460px) {
+    /*=========================================
+                 HAMBURGER MENU
+    =========================================*/
+    .topnav {
+    overflow: hidden;
+    background-color: rgb(16, 115, 243);
+    position: relative;
+    font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+    display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+    color: white;
+    padding: 14px 17px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    }
+    a.icon {
+        color: rgb(16, 115, 243);
+        padding: 30px 30px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background:white;
+        color: rgb(16, 115, 243);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 60px;
+        padding-bottom: 61px;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: white;
+        color: rgb(16, 115, 243);
+    }
+    a.active {
+        padding: 60px 60px;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: rgb(16, 115, 243);
+        color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+    a:link {
+        color: rgb(255, 255, 255);
+    }
+
+    #hideOnMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+    
+    
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 100px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 20px;
+    
+        position: absolute;
+        top: 40px;
+        margin-left: 120px;
+        margin-top: 55px;
+    }
+    
+    /*===============================
+                TEXT BOXES 
+     ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 40px;
+        margin-top: 5px;
+        margin-right: 45px;
+    }
+    #offer {
+        text-align: center;
+        font-size: xx-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: xx-large;
+    }
+    .insurances {
+        font-size: 30px;
+    }
+    .textboxFontSize {
+        font-size: 25px;
+    }
+    #doctorShannon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #doctorShannonMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 20px;
+    }
+    
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: rgb(231, 231, 231);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-size: x-large;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active > .accordion:hover {
+        background-color: rgb(231, 231, 231);
+    }
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        font-size: large;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    }
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    .blueBack2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        margin-left: 225px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #textArea {
+        min-width: 98%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #map {
+        padding: 30px 10px 10px 10px;
+        border:0;
+        width: 96%;
+    }
+    
+    
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: x-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .paddingLeft {
+        text-align: center;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #join_list {
+        margin-right: 30px;
+    }
+    .redImportant {
+        color: red;
+    }
+    #newsletterInfo {
+        font-size: x-large;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .leftWall {
+        text-align: left;
+        font-size: x-large;
+    }
+    /*========================================
+                 THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+    
+    
+    /*========================================
+                    FOOTER LOGOS 
+     =========================================*/
+    .facebook {
+        float: left;
+        padding-top: 15px;
+        padding-left: 7px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 7px;
+        padding-top: 15px;
+    }
 }
-.twitter {
-    float: right;
-    padding-right: 50px;
-    padding-top: 15px;
+
+
+
+
+
+
+
+
+
+
+
+/*======================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+/*==================================
+            MOBILE STYLING
+====================================*/
+
+@media only screen and (max-width: 459px) {
+    /*=====================================================
+                        HAMBURGER MENU
+    =======================================================*/
+    .topnav {
+    overflow: hidden;
+    background-color: rgb(16, 115, 243);
+    position: relative;
+    font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+    display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+    color: white;
+    padding: 14px 17px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    }
+    a.icon {
+        color: rgb(16, 115, 243);
+        padding: 30px 30px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background:white;
+        color: rgb(16, 115, 243);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 60px;
+        padding-bottom: 61px;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: white;
+        color: rgb(16, 115, 243);
+    }
+    a.active {
+        padding: 60px 60px;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: rgb(16, 115, 243);
+        color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+    a:link {
+        color: rgb(255, 255, 255);
+    }
+
+    #hideOnMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+    
+    
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 200px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 20px;
+    
+        position: absolute;
+        top: 40px;
+        margin-left: 120px;
+        margin-top: 55px;
+    }
+    
+    /*===============================
+                TEXT BOXES 
+     ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-right: 45px;
+    }
+    #offer {
+        text-align: center;
+        font-size: x-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: x-large;
+    }
+    .insurances {
+        font-size: 20px;
+    }
+    .textboxFontSize {
+        font-size: 15px;
+    }
+    #doctorShannon {
+        visibility: hidden;
+        position: absolute;
+    }
+    #doctorShannonMobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 15px;
+    }
+    
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 30px;
+    
+        text-align: center;
+        border-style: solid;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: rgb(231, 231, 231);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-size: x-large;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active > .accordion:hover {
+        background-color: rgb(231, 231, 231);
+    }
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        font-size: large;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    }
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    .blueBack2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    #FAQheader {
+        font-size: 25px;
+    }
+    
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        margin-left: 120px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #textArea {
+        min-width: 98%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #map {
+        padding: 30px 5px 5px 5px;
+        border:0;
+        width: 98%;
+    }
+    
+    
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: x-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .paddingLeft {
+        text-align: center;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #join_list {
+        margin-right: 30px;
+    }
+    .redImportant {
+        color: red;
+    }
+    #newsletterInfo {
+        font-size: x-large;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .leftWall {
+        text-align: left;
+        font-size: x-large;
+    }
+    /*========================================
+                 THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+    
+    
+    /*========================================
+                    FOOTER LOGOS 
+     =========================================*/
+     .facebook {
+        float: left;
+        padding-left: 105px;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 105px;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
 }

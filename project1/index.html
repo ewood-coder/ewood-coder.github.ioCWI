@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Dentlytical Solutions</title> <!-- This is an original name (used name generator) -->
+    <title>Dentlytical Solutions | Home</title> <!-- This is an original name (used name generator) -->
     <meta content="Proud to offer the highest level of dental care to our community." name="description">
     <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
     <meta name="author" content="Emma Wood">
@@ -12,7 +12,11 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- JavaScript File -->
-    <script src="js/JavaScript.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="images/tooth.png"/>
@@ -22,42 +26,68 @@
     <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
         gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
         K5i4aAhUfEALw_wcB  -->
+
+    <!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 1-19-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 1-29-2021
+
+        #Modification Log:
+            - 1-19-2021: Essential files/folders created | Created content areas for: (Home).
+            - 1-24-2021: Finished home page -added text boxes and information- | Added JavaScript for clock | Tested, but not mobile friendly.
+            - 1-25-2021: Started FAQ page | Created Content areas for: (FAQ, Contact, Newsletter).
+            - 1-26-2021: Finished FAQ page | Added JS for accordion | Added FAQ information/textboxes | Tested, but not mobile friendly.
+            - 1-27-2021: Started & finished Contact page | Added JavaScript to contact form | Fixed bug with phone not being required in form |
+                         Tested, but not mobile friendly.
+            - 1-28-2021: Started  & finished newsletter page | Added JavaScript for newsletter | Changed Nav to Hamburger menu | Fixed all validator errors |
+                         Did mobile styling for all pages except contact page.
+            - 1-29-2021: Added mobile/tablet/desktop styling for each page | Changed logo for mobile/tablet nav.
+    =========================================================================================================================================================-->
 </head>
 <body>
-
-    <header class="header">
-        <div id="timeDate"></div>
-        <nav>
+    <header>
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
             <p id="logo">
-                <img src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
             </p>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+            <div id="timeDate"></div>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
 
     <main>
-
         <section id="noUnderline">
-            <h1>Looking For A Dentist In Boise, ID?</h1>
+            <h1>Looking For A Dentist In Meridian, ID?</h1>
             <h3>We're accepting new patients!</h3>
         </section>
 
         <section class="boxes">
-            <h1><u>Our Special Offer Includes</u></h1>
+            <h1 id="offer1"><u>Our Special Offer Includes</u></h1>
 
-            <ul>
-                <li>Exam</li>
-                <li>X-Rays</li>
-                <li>Free Implant Consultations</li>
+            <ul id="indexLI">
+                <li>- Exam</li>
+                <li>- X-Rays</li>
+                <li>- Free Implant Consultations</li>
             </ul>
 
 
             <section class="blueBack">
-                <h1 id="insurances"><b>What Insurances We Accept:</b></h1>
+                <h1 class="insurances"><b><u>What Insurances We Accept:</u></b></h1>
                     <p class="textboxFontSize">
                         We are in-network with Relta Dental, RedCross RedShield, FEHA, and Signa. 
                         Our knowledgeable staff will do their best to make sure you are getting the 
@@ -67,12 +97,12 @@
             </section>
         </section>
 
-        <section id="boxes1">
-            <h1 id="textCenter"><u>Meet The Doctor Behind It All</u></h1>
+        <section class="boxes1">
+            <h1 class="textCenter" id="offer"><u>Meet The Doctor Behind It All</u></h1>
             <img id="doctorShannon" src="images/femaleDoctor.png" alt="picture of Doctor Shannon">
-
+            <img id="doctorShannonMobile" src="images/femaleDoctor1.png" alt="picture of Doctor Shannon">
             <section class="blueBack" id="shannon">
-                <h1 id="insurances"><b>Dr. Shannon Farris</b></h1>
+                <h1 class="insurances"><b><u>Dr. Shannon Farris</u></b></h1>
                     <p class="textboxFontSize">
                         Dr. Farris wanted to get started in dentistry to provide her patients with a 
                         better experience than she was given. (She had braces for seven years during her 
@@ -93,16 +123,14 @@
 
     </main>
 
-    <footer class="header" id="footer">
+    <footer>
         <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
         <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
-
         <p>
-            <br>
             &#169; 2021 Dentlytical Solutions<br>
             Email: <a href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
             Phone: <a href="tel:+12088545633">(208)-854-5633</a><br>
-            Boise, Idaho 83709
+            6841 Ridgetop Way, Boise, Idaho 83709
         </p>
     </footer>
 </body>

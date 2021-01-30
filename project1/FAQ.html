@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dentlytical Solutions | FAQ</title> <!-- This is an original name (used name generator) -->
+    <meta content="Proud to offer the highest level of dental care to our community." name="description">
+    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <meta name="author" content="Emma Wood">
+
+    <!-- CSS File -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JavaScript File -->
+    <script src="js/clock.js" defer></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/tooth.png"/>
+    <!-- Favicon taken from images on Google:
+         Dentist in Santa Monica | Drake Dental -->
+
+    <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
+        gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
+        K5i4aAhUfEALw_wcB  -->
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <p id="logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            </p>
+            <div id="timeDate"></div>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+    <section class="boxes1">
+        <!-- FAQ Ideas Taken From: https://mountaindental.com/patient-information/frequently-asked-questions/-->
+        <section class="blueBack2">
+            <h1 class="textboxFontSize" id="FAQheader"><u>First Appointment FAQs</u></h1>
+            <p class="changeSize">
+                Have a question that is not answered below? Feel free to give us a call and ask!<br>
+                Phone: (208)-854-5633
+            </p>
+        </section>
+
+        <button class="accordion">What do I need to bring to my first appointment?</button>
+        <div class="panel">
+            <br>Please bring the following items with you to your appointment:<br>
+            <ul>
+                <li>Patient Information Form</li>
+                <li>Dental Insurance Card (if applicable)</li>
+                <li>Identification such as Driver's License, Military ID or State ID</li>
+                <li>Patient Health History Form</li>
+                <li>HIPAA Consent Form</li>
+                <li>Patient Authorization Form</li>
+            </ul>
+        </div>
+        <br><br>
+
+        <button class="accordion">What should I do if I require premedication?</button>
+        <div class="panel">
+            <p>
+                Please be sure to request a prescription prior to your appointment, 
+                or if you are unsure, contact us and we can help.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">Will you bill my insurance?</button>
+        <div class="panel">
+            <p>
+                Yes. As a service to our patients, primary insurance is billed. 
+                We have recently enhanced our system to accommodate automatic billing 
+                of secondary insurance. Please be sure to keep us informed of your insurance coverage.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">How long will my first appointment last?</button>
+        <div class="panel">
+            <p>
+                It varies, but please plan on 1 to 1.5 hours for the first visit.
+            </p>
+        </div>
+
+        <h1 class="blueBack2"><u>Office FAQ's</u></h1>
+
+        <button class="accordion">What if I can't make my appointment and I need to reschedule?</button>
+        <div class="panel">
+            <p>
+                Please call our office as soon as you realize you will not 
+                be able to keep your appointment. We prefer all cancellations be made at 
+                least 24 hours prior to your scheduled appointment time. This will allow 
+                us to give another patient the opportunity to be seen.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">If I call with a question for the dentist, 
+                                  when can I expect a call back?</button>
+        <div class="panel">
+            <p>
+                Our faculty are with patients throughout the day, so it is 
+                usually not possible for them to immediately answer phone calls. We will 
+                return your call as soon as possible. To help us get back to you quickly 
+                leave us your full name, date of birth, reason for the call and current 
+                phone number.
+            </p>
+        </div>
+
+        <h1 class="blueBack2"><u>General Dentistry FAQ's</u></h1>
+
+        <button class="accordion">Why should I go to the dentist regularly?</button>
+        <div class="panel">
+            <p>
+                Many people do not see a dentist on a regular basis. They only go when they 
+                have a problem. This is known as "crisis treatment" versus "preventive treatment." 
+                While these patients may feel they are saving money, it often ends up costing 
+                much more in dollars and time. This is because many dental problems do not 
+                have symptoms until they reach the advanced stages of the disease process. 
+                An example is tooth decay. It is typical to hear, "Nothing hurts... I don't 
+                have any problems."<br><br>
+                Tooth decay often does not hurt until it gets close to the nerve of the tooth. 
+                It is not uncommon to see a patient with a huge cavity who has never felt a 
+                thing. The dentist can usually detect a cavity 3-4 years before it develops 
+                any symptoms. This early detection can help you prevent root canal treatment.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">Why should I floss, isn't brushing enough?</button>
+        <div class="panel">
+            <p>
+                Flossing reduces the number of bacteria in your mouth. There are millions 
+                of these microscopic creatures feeding on food particles left on your teeth. 
+                These bacteria live in plaque which can be removed by flossing. Brushing your 
+                teeth gets rid of some of the bacteria in your mouth. Flossing gets rid of 
+                the bacteria the toothbrush can't get to. That's the bacteria hiding in the 
+                tiny spaces between your teeth. If you do not floss, you allow plaque to 
+                remain between your teeth. Eventually it hardens into tartar. Plaque can 
+                be removed by brushing. Only the dentist can remove tartar.<br><br>
+                Ask your dentist to show you the proper way to floss. You will both notice 
+                the difference at the next cleaning appointment.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">How can I get my kids to brush their teeth?</button>
+        <div class="panel">
+            <p>
+                Make it fun! If you are enthusiastic about brushing your teeth, your children 
+                will also be enthusiastic. Children want to do the things their parents do. 
+                If your children see you brushing your teeth and displaying good dental habits, 
+                they will follow. Ask the dentist for other creative ways to get children to 
+                brush their teeth.<br><br>
+                Getting your children to brush starts with taking them to the dentist at an 
+                early age. All children should be seen by their first birthday or 6 months 
+                after the eruption of the first tooth.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">How can I prevent cavities?</button>
+        <div class="panel">
+            <p>
+                Always spend two to three minutes brushing your teeth. It takes that 
+                long to get rid of the bacteria that destroy tooth enamel. Do not brush 
+                too hard. It takes very little pressure to remove bacteria and plaque. 
+                Floss at least once a day. Flossing is the only way to get bacteria from 
+                between your teeth.<br><br>
+                Watch the sugar you eat. There is sugar in candy, fruits, crackers and 
+                chips. These are the foods that the bacteria in your mouth like best. 
+                Be mindful of foods like raisins and peanut butter that stick to your teeth. 
+                They can provide a constant supply for the bacteria eating into your teeth. 
+                Try to minimize the times during the day when sweet items are eaten and 
+                brush your teeth afterwards.<br><br>
+                If you cannot brush after a meal, rinse your mouth with water - which can 
+                help to remove food from your teeth. Chewing sugarless gum after a meal can 
+                also help. Chewing deskulates the flow of your saliva which acts as a natural
+                 plaque-fighting substance. And do not forget your regular dental visits. 
+                 Good dental habits will go a long way toward a no-cavity visit.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">What can I do about sensitive teeth?</button>
+        <div class="panel">
+            <p>
+                Sensitivity toothpaste, which contains strontium chloride or potassium 
+                nitrate are very effective in treating sensitive teeth. After a few weeks 
+                of use, you may notice a decrease in sensitivity. Highly acidic foods such 
+                as oranges, grapefruits and lemons, as well as tea and soda can increase 
+                tooth sensitivity, and work against sensitivity toothpaste. If you do not 
+                get relief by brushing gently and using desensitizing toothpaste, see 
+                your dentist. There are special compounds that can be applied in-office 
+                to the roots of your tooth to reduce - if not eliminate - the sensitivity. 
+                High-fluoride containing home care products can also be recommended to 
+                help reduce tooth sensitivity.<br><br>
+                Ask the friendly staff at Dentlytical Solutions for more information on sensitive teeth.
+            </p>
+        </div>
+        <br><br>
+
+        <button class="accordion">What is periodontal disease?</button>
+        <div class="panel">
+            <br>
+                Periodontal disease is inflammation and infection of the gums and 
+                supporting bone structure, which if left untreated, can cause permanent 
+                jaw bone destruction and possible tooth loss. Untreated periodontal disease 
+                has been linked to increased risk for conditions such as heart disease, 
+                stroke, low birth weight babies, pre-term delivery, respiratory disease, 
+                and prostate cancer. An advanced stage of periodontal disease exhibits 
+                inflamed gums pulling away from your bone and teeth. Other signs of 
+                periodontal disease include:<br>
+                <ul>
+                    <li>Bad breath</li>
+                    <li>Red or swollen gums</li>
+                    <li>Loose teeth or teeth that have moved</li>
+                    <li>Sensitive teeth</li>
+                    <li>Pus coming from around the teeth</li>
+                    <li>Pain when chewing</li>
+                    <li>Tender gums</li>
+                    <li>Bleeding gums</li>
+                </ul>
+                Treatment of early periodontal disease can be performed in-office. 
+                However, advanced stages may require surgery. Periodontal disease can 
+                be prevented and treated successfully by seeing your dentist and dental 
+                hygienist regularly and following recommended care plans.
+            <br>
+        </div>
+        <!-- JUST IN CASE I NEED TO ADD MORE
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum...</p>
+        </div>
+        <br><br>
+        -->
+    </section>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
+        <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
+        <p>
+            &#169; 2021 Dentlytical Solutions<br>
+            Email: <a href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
+            Phone: <a href="tel:+12088545633">(208)-854-5633</a><br>
+            6841 Ridgetop Way, Boise, Idaho 83709
+        </p>
+    </footer>
+</body>
+</html>
