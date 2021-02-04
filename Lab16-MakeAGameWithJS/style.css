@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+    margin-left: 10%;
+    padding: 0px 10px 50px 0px;
+}
+#score {
+    font-size: xx-large;
+    text-align: center;
+}
+#gameBox {
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    margin-top: 25px;
+    margin-right: 700px;
+    margin-left: 700px;
+    text-align: center;
+
+    background: radial-gradient(#ffffff 40%, #392bff);
+}
+#instructions {
+    margin-top: 15px;
+    text-align: center;
+    background-color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    margin-right: 400px;
+    margin-left: 400px;
+
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+    color: red;
+}
+p {
+    font-size: 29px;
+}
+html {
+    background-image: url('images/htmlBackground.jpg');
+    font-family: 'robotoregular', Arial, Helvetica;
+}
+#marginTop {
+    line-height: 20px;
+}
