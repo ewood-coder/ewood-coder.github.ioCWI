@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dentlytical Solutions | Home</title> <!-- This is an original name (used name generator) -->
+    <meta content="Proud to offer the highest level of dental care to our community." name="description">
+    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <meta name="author" content="Emma Wood">
+
+    <!-- CSS File -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JavaScript File -->
+    <script src="js/clock.js" defer></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/tooth.png"/>
+    <!-- Favicon taken from images on Google:
+         Dentist in Santa Monica | Drake Dental -->
+
+    <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
+        gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
+        K5i4aAhUfEALw_wcB  -->
+
+    <!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 1-19-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 2-5-2021
+
+        #Modification Log:
+            - 1-19-2021: Essential files/folders created | Created content areas for: (Home).
+            - 1-24-2021: Finished home page -added text boxes and information- | Added JavaScript for clock | Tested, but not mobile friendly.
+            - 1-25-2021: Started FAQ page | Created Content areas for: (FAQ, Contact, Newsletter).
+            - 1-26-2021: Finished FAQ page | Added JS for accordion | Added FAQ information/textboxes | Tested, but not mobile friendly.
+            - 1-27-2021: Started & finished Contact page | Added JavaScript to contact form | Fixed bug with phone not being required in form |
+                         Tested, but not mobile friendly.
+            - 1-28-2021: Started  & finished newsletter page | Added JavaScript for newsletter | Changed Nav to Hamburger menu | Fixed all validator errors |
+                         Did mobile styling for all pages except contact page.
+            - 1-29-2021: Added mobile/tablet/desktop styling for each page | Changed logo for mobile/tablet nav.
+            - 2-4-2021: Added new desktop navbar | Fixed bug with clock not appearing on mobile/tablet.
+            - 2-5-2021: Added link to staff page which has the slideshow |
+    =========================================================================================================================================================-->
+</head>
+<body>
+    <header>
+        <!-- DESKTOP NAVBAR -->
+        <nav class="topNav1">
+            <img id="absolute" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            
+            <div id="Links">
+                <ul>
+                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+                    <li><a class="paddingRight1" href="contact.html">Contact</a></li>
+                    <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <!-------------------------------------------------------------------------------------->
+
+        <!-- TABLET/MOBILE NAVBAR -->
+        <div class="topnav">
+            <p id="logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            </p>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="timeDate"></div>
+    </header>
+
+    <main>
+        <section id="noUnderline">
+            <h1>Looking For A Dentist In Meridian, ID?</h1>
+            <h3>We're accepting new patients!</h3>
+        </section>
+
+        <section class="boxes">
+            <h1 id="offer1"><u>Our Special Offer Includes</u></h1>
+
+            <ul id="indexLI">
+                <li>- Exam</li>
+                <li>- X-Rays</li>
+                <li>- Free Implant Consultations</li>
+            </ul>
+
+
+            <section class="blueBack">
+                <h1 class="insurances"><b><u>What Insurances We Accept:</u></b></h1>
+                    <p class="textboxFontSize">
+                        We are in-network with Relta Dental, RedCross RedShield, FEHA, and Signa. 
+                        Our knowledgeable staff will do their best to make sure you are getting the 
+                        most out of your dental insurance benefits. Call our front desk at <u>(208)-854-5633</u>, 
+                        or stop by today to speak with our team about utilizing your dental benefits!
+                    </p>
+            </section>
+        </section>
+
+        <section class="boxes1">
+            <h1 class="textCenter" id="offer"><u>Meet The Doctor Behind It All</u></h1>
+            <img id="doctorShannon" src="images/femaleDoctor.png" alt="picture of Doctor Shannon">
+            <img id="doctorShannonMobile" src="images/femaleDoctor1.png" alt="picture of Doctor Shannon">
+            <section class="blueBack" id="shannon">
+                <h1 class="insurances"><b><u>Dr. Shannon Farris</u></b></h1>
+                    <p class="textboxFontSize">
+                        Dr. Farris wanted to get started in dentistry to provide her patients with a 
+                        better experience than she was given. (She had braces for seven years during her 
+                        childhood!) Dr. Farris received her BS in Microbiology from Brigham Young 
+                        University and graduated with her DMD from University of Louisville School
+                        of Dentistry in 2015. After having worked as an associate in other offices, 
+                        Dr. Farris realized starting her own practice would allow her the freedom to 
+                        create the dental experience she always envisioned for her patients while 
+                        being able to spend quality time with her family. Dr. Farris has been 
+                        happily married to her husband, Joseph, for eleven years and, together, they have 
+                        four children. Learning new things and interesting facts, spending time outside 
+                        enjoying the beautiful weather, and making people smile are just a few of Dr. 
+                        Farris's favorite things to do!
+                    </p>
+            </section>
+            <section id="staffLink">
+                <a id="decoration" href="staff.html">Click here to meet the rest of the staff here at Dentlytical Solutions!</a>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
+        <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
+        <p>
+            &#169; 2021 Dentlytical Solutions<br>
+            Email: <a href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
+            Phone: <a href="tel:+12088545633">(208)-854-5633</a><br>
+            6841 Ridgetop Way, Boise, Idaho 83709
+        </p>
+    </footer>
+</body>
+</html>
