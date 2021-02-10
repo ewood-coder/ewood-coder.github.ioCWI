@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial</title>
+    <link type="text/css" rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <main>
+    <h1>Tutorial - page 1</h1> 
+    <p>Here's the first thing you need to know about our site.</p>
+    
+    <input type="button" id="next" value="Next">
+  </main>  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- Change the JavaScript code in the script element of the 
+       tutorial1.html file so it sets the value of the location 
+       object rather than calling the replace() method. -->
+  <script>
+      $("#next").click( () => location = "tutorial2.html");
+  </script>
+</body>
+</html>
