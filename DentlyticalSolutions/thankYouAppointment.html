@@ -3,20 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Dentlytical Solutions | Newsletter</title> <!-- This is an original name (used name generator) -->
-    <meta content="Proud to offer the highest level of dental care to our community." name="description">
-    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <title>Dentlytical Solutions | Thank You</title> <!-- This is an original name (used name generator) -->
     <meta name="author" content="Emma Wood">
 
     <!-- CSS File -->
     <link href="css/styles.css" rel="stylesheet">
 
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <!-- JavaScript File -->
     <script src="js/clock.js" defer></script>
-    <script src="js/form.js"></script>
     <script src="js/hamburger.js" defer></script>
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -34,16 +28,13 @@
     <!--=====================================================================================================================================================
                                             MODIFICATION LOG
         #Original Author: Emma L. Wood
-        #Date Created: 1-19-2021
-        #Date Mod Log was Created for File: 2-4-2021
+        #Date Created: 2-17-2021
+        #Date Mod Log was Created for File: 2-17-2021
         #Last Modified by: Emma L. Wood
         #Date Last Modified: 2-17-2021
 
         #Modification Log:
-            - PREVIOUS LOGS CAN BE FOUND ON HTML
-            - 2-4-2021: Added html for desktop navbar.
-            - 2-12-2021: Added regex | Changed the html of the form | Changed the JS file the form uses.
-            - 2-17-2021: Fixed issue where I forgot to include CDN link.
+        - 2-17-2021: Created thank you page for appointment page | Fixed scaling issue with image.
     =========================================================================================================================================================-->
 </head>
 <body>
@@ -62,7 +53,7 @@
             </div>
         </nav>
 
-    <!--********************************************************************************************-->
+    <!--*********************************************************************************************-->
 
         <!-- TABLET/MOBILE NAVBAR -->
         <div class="topnav">
@@ -88,54 +79,17 @@
 
     <main>
         <section class="boxes1">
-            <!-- BEGIN FORM -->
-            <section class="boxes4">
-                <div class="container">
-                    <div class="row">
-                        <div>
-                            <h2 id="textboxFontSize1"><u>Join our newsletter!</u></h2>
-                            <form role="form" action="thankYou.html" method="post" enctype="text/plain">
-                                <div class="row">
-                                    <div class="textBoxes">
-                                        <br><label for="yourName"><b class="robotoR">Your Name:</b></label><br>
-                                        <input type="text" id="yourName" name="Name " pattern="^[a-z\sA-Z]+" required>
-                                    </div>
-                                    <div class="textBoxes"> <!-- Has built in regex -->
-                                        <br><label for="email"><b class="robotoR">Email:</b></label><br>
-                                        <input type="email" id="email" name="Email " placeholder="YourEmail@me.com" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="textBoxes">
-                                        <input type="reset" id="clear_form" class="resetButton" value="Clear Form">
-                                        <input type="submit" id="join_list" class="submit" value="Join List">
-                                    </div>
-                                </div>
-                            </form>
-                            <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your message successfully!</h3> </div>
-                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END FORM -->
-
-            <section class="blueBack">
-                <h1 class="h11"><u>The information in our newsletter includes the following:</u></h1>
-                <ul class="leftWall">
-                    <li class="textboxFontSize">- Changes to our facility and when they happen.</li>
-                    <li class="textboxFontSize">- Recommended dental products.</li>
-                    <li class="textboxFontSize">- Updates on when our facilities close/open for holidays and other events.</li>
-                    <li class="textboxFontSize">- Employment opportunities.</li>
-                </ul>
-            </section>
+            <img class ="checkMark" id="hideOnMobile2" src="images/checkMark.png" alt="Confirmation Check Mark">
+            <p class="textCenter"><b>Your form has been submitted.</b><br></p>
+            <h1 class="h11">Thank you for requesting an appointment with us.</h1>
+            <h2 class="h11">We'll be seeing you soon!</h2>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
         <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
-        <p>
+        <p class="fixFooter">
             &#169; 2021 Dentlytical Solutions<br>
             Email: <a class="whiteColor" href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
             Phone: <a class="whiteColor" href="tel:+12088545633">(208)-854-5633</a><br>

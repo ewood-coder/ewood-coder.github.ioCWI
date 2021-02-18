@@ -10,7 +10,7 @@
     - 2-5-2021:  Added JQuery function for slideshow
 =========================================================================================================================================================*/
 
-$(document).ready(function(){
+$(document).ready(function() {
     $('.your-class').slick({
         dots: true,
         infinite: true,

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dentlytical Solutions | Contact</title> <!-- This is an original name (used name generator) -->
+    <meta content="Proud to offer the highest level of dental care to our community." name="description">
+    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <meta name="author" content="Emma Wood">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JavaScript File -->
+    <script src="js/clock.js" defer></script>
+    <script src="js/form.js"></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/tooth.png"/>
+    <!-- Favicon taken from images on Google:
+         Dentist in Santa Monica | Drake Dental -->
+
+    <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
+        gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
+        K5i4aAhUfEALw_wcB  -->
+
+    <!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 2-17-2021
+        #Date Mod Log was Created for File: 2-17-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 2-17-2021
+
+        #Modification Log:
+            - 2-17-2021: Created page | added html elements | Completed construction of page | Fixed validator issues.
+    =========================================================================================================================================================-->
+</head>
+<body>
+    <header>
+        <!-- DESKTOP NAVBAR -->
+        <nav class="topNav1">
+            <img id="absolute" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            
+            <div id="Links">
+                <ul>
+                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+                    <li><a class="paddingRight1" href="contact.html">Contact</a></li>
+                    <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <!--******************************************************************************************-->
+
+        <!-- TABLET/MOBILE NAVBAR -->
+        <div class="topnav">
+            <p id="logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            </p>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="timeDate"></div>
+    </header>
+
+    <section class="boxes6">
+        <section class="boxes3">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h2 id="textboxFontSize1"><u>Request An Appointment</u></h2> 
+                        <p id="textboxFontSize2">
+                            Please let us know the purpose of your visit in the textbox below along with any additional comments.
+                        </p>
+                        <form role="form" action="thankYouAppointment.html" method="post" enctype="text/plain">
+                            <div class="row">
+                                <div class="textBoxes">
+                                    <label for="textArea"><b class="robotoR">Message:</b></label><br>
+                                    <textarea id="textArea" name="Message " maxlength="6000" rows="12"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="textBoxes">
+                                    <br><label for="yourName"><b class="robotoR">Your Name:</b></label><br>
+                                    <input type="text" id="yourName" name="Name " pattern="^[a-z\sA-Z]+" required>
+                                </div>
+                                <div class="textBoxes"> <!-- Has built in regex -->
+                                    <br><label for="email"><b class="robotoR">Email:</b></label><br>
+                                    <input type="email" id="email" name="Email " placeholder="YourEmail@me.com" required>
+                                </div>
+                                <div class="textBoxes">
+                                    <br><label for="phone"><b class="robotoR">Phone:</b></label><br>
+                                    <input type="tel" id="phone" name="Phone " pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                    placeholder="(# # #)  -  # # #  -  # # # #" required>
+                                </div>
+                            </div>
+
+                            <!-- DROPDOWN MENU -->
+                            <div id="dropDown" class="textBoxes">
+                                <h4 class="dropDown3">
+                                    <span>
+                                        <u><b>First Time Visit?</b></u>
+                                    </span>
+                                </h4>
+                                <select id="dropDown1" name="First Time Visit? ">
+                                    <optgroup class="dropDown3" label="First Time Visit?">
+                                        <option value = " Yes">Yes</option>
+                                        <option value = " No">No</option>
+                                    </optgroup>
+                                </select><br>
+                            </div>
+                            <!-- END DROPDOWN MENU -->
+
+                            <!-- START CHECKBOX MENU -->
+                            <h3>What day(s) of the week are you available?</h3>
+                            <input type="checkbox" id="Monday" name="Day of the Week " value=" Monday">
+                            <label for="Monday">Monday</label><br>
+
+                            <input type="checkbox" id="Tuesday" name="Day of the Week " value=" Tuesday">
+                            <label for="Tuesday">Tuesday</label><br>
+
+                            <input type="checkbox" id="Wednesday" name="Day of the Week " value=" Wednesday">
+                            <label for="Wednesday">Wednesday</label><br>
+
+                            <input type="checkbox" id="Thursday" name="Day of the Week " value=" Thursday">
+                            <label for="Thursday">Thursday</label><br>
+
+                            <input type="checkbox" id="Friday" name="Day of the Week " value=" Friday">
+                            <label for="Friday">Friday</label><br>
+                            <!-- END CHECKBOX MENU -->
+                            
+                            <!-- START DROPDOWN MENU 2 -->
+                            <div id="dropDown4" class="textBoxes">
+                                <h4 class="dropDown3">
+                                    <span>
+                                        <u><b>Time of Appointment?</b></u>
+                                    </span>
+                                </h4>
+                                <select id="dropDown5" name="Time of Appointment? ">
+                                    <optgroup class="dropDown3" label="Time of Appointment?">
+                                        <option value = " Whenever Available">Whenever Available</option>
+                                        <option value = " 8:00 am">8:00 am</option>
+                                        <option value = " 9:00 am">9:00 am</option>
+                                        <option value = " 10:00 am">10:00 am</option>
+                                        <option value = " 11:00 am">11:00 am</option>
+                                        <option value = " 12:00 pm">12:00 pm</option>
+                                        <option value = " 1:00 pm">1:00 pm</option>
+                                        <option value = " 2:00 pm">2:00 pm</option>
+                                        <option value = " 3:00 pm">3:00 pm</option>
+                                        <option value = " 4:00 pm">4:00 pm</option>
+                                        <option value = " 5:00 pm">5:00 pm</option>
+                                        <option value = " 6:00 pm">6:00 pm</option>
+                                    </optgroup>
+                                </select><br>
+                            </div>
+                            <!-- END DROPDOWN MENU 2 -->
+
+                            <div class="row">
+                                <div class="textBoxes">
+                                    <input id="resetButton" class="Button2" type="reset">
+                                    <button id="submit" class="Button2" type="submit">Send &rarr;</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your message successfully!</h3> </div>
+                        <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTACT FORM -->
+        </section>
+    </section>
+        
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
+        <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
+        <p id="fixFooter">
+            &#169; 2021 Dentlytical Solutions<br>
+            Email: <a class="whiteColor" href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
+            Phone: <a class="whiteColor" href="tel:+12088545633">(208)-854-5633</a><br>
+            2275 Eagle Rd, Meridian, Idaho 83642
+        </p>
+    </footer>
+</body>
+</html>
