@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Using Skeleton</title>
+        <meta content="Team information regarding the Senior Tennis Club in Boise/Meridian." name="description">
+        <meta content="Tennis, Information, Schedule, Contact" name="keywords">
+        <meta name="author" content="Emma Wood">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="Skeleton-2.0.4/images/favicon.png"/>
+
+        <!-- CSS File -->
+        <link href="Skeleton-2.0.4/css/normalize.css" rel="stylesheet">
+        <link href="Skeleton-2.0.4/css/skeleton.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-- START NAVBAR -->
+        <ul class="topnav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="right"><a href="about.html">About</a></li>
+        </ul>
+          
+        <div style="padding:0 16px;" id="title1">
+            <h2 class="textCenter"><u>Senior Tennis Club</u></h2>
+            <p class="textCenter">Hello all! Here, you'll be able to find the information regarding our tennis club meetups.</p>
+            <p class="textCenter">
+                The names of those scheduled to play, the times, the location, and court numbers wil be shown on the table below.<br>
+                If you need more information just use the contact form below and we'll get to you as soon as possible.
+            </p>
+        </div>
+        <!-- END NAVBAR --><br>
+
+        <!-- START TABLE -->
+        <section class="textBoxes">
+            <h3><b><u>Meetup information</u></b></h3>
+            <table class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Time Slot</th>
+                    <th>Location</th>
+                    <th>Court Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dave Gamache</td>
+                    <td>1:00 pm</td>
+                    <td>Meridian Courts</td>
+                    <td>Court 2</td>
+                  </tr>
+                  <tr>
+                    <td>Jessica Teal</td>
+                    <td>2:00 pm</td>
+                    <td>Boise Husk Courts</td>
+                    <td>Court 5</td>
+                  </tr>
+                  <tr>
+                    <td>Dwayne Johnson </td>
+                    <td>3:00 pm</td>
+                    <td>Kuna Community Courts</td>
+                    <td>Court 4</td>
+                  </tr>
+                  <tr>
+                    <td>Amy Dublin</td>
+                    <td>4:00 pm</td>
+                    <td>Meridian Courts</td>
+                    <td>Court 12</td>
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+        <!-- END TABLE --><br>
+
+        <!-- START LIST -->
+        <section class="textBoxes1">
+            <h5><b><u>Make sure to bring these items to your matches:</u></b></h5>
+            <ul>
+                <li>Water bottle(s) - Water WILL be provided, but it goes fast so make sure to bring extra.</li>
+                <li>Rackets (send an email if you need to borrow one).</li>
+                <li>Extra tennis balls.</li>
+                <li>Towel(s).</li>
+                <li>ID card (you can't enter the private courts without proving your identity on the team).</li>
+                <li>Emergency contact information (ONLY if you're new and haven't brought your paperwork to the team captain yet).</li>
+                <li>Any personal items you may need.</li>
+            </ul>
+        </section>
+        <!-- END LIST --><br>
+
+
+
+        <!-- START FORM -->
+        <form class="textBoxes">
+            <h3><b><u>Contact Form</u></b></h3>
+            <div class="row">
+                <div class="six columns">
+                    <label for="exampleEmailInput">Your email</label>
+                    <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+                </div>
+                <div class="six columns">
+                    <label for="exampleRecipientInput">Reason for contacting</label>
+                    <select class="u-full-width" id="exampleRecipientInput">
+                    <option value="Option 1">Questions</option>
+                    <option value="Option 2">Help</option>
+                    <option value="Option 3">Other</option>
+                    </select>
+                </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+                <input type="checkbox">
+                <span class="label-body">Send a copy to yourself</span>
+            </label>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
+        <!-- END FORM -->
+    </body>
+</html>

@@ -1,0 +1,75 @@
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.textBoxes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    border-style: solid;
+    
+    padding: 5px 5px 5px 5px;
+    padding-top: 3px;
+
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(127, 207, 89);
+    border-width: 4px;
+}
+.textBoxes1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    border-style: solid;
+    
+    padding: 5px 5px 5px 5px;
+    padding-top: 3px;
+
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(164, 230, 136);
+    border-width: 4px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.textCenter {
+    text-align: center;
+}
+#title1 {
+    margin-top: 20px;
+}
