@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Farris Flowers</title>
+        <meta content="We're proud to offer the highest quality flowers to our community." name="description">
+        <meta content="Flower, Bouquet, Online shopping, In store pickup, High quality, Gardening" name="keywords">
+        <meta name="author" content="Emma Wood">
+    
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/flowerFavicon.jpg"/>
+
+        <!-- Bootstrap 3 CDN Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- CSS File -->
+        <link href="css/styles.css" rel="stylesheet">
+    
+        <!--=====================================================================================================================================================
+                                                MODIFICATION LOG
+            #Original Author: Emma L. Wood
+            #Date Created: 3-2-2021
+            #Last Modified by: Emma L. Wood
+            #Date Last Modified: 3-3-2021
+    
+            #Modification Log:
+                - 3-2-2021: Set up HTML/CSS documents | Added all html for NavBar, Footer, Scroll to top button, sign up modal, accordion, and the image gallery.
+                - 3-3-2021: Added about us section and contact section html. 
+        =========================================================================================================================================================-->
+    </head>
+
+    <body>
+        <!-- NAV BAR -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="topnav" id="myTopnav">
+            <a href="#jumbotron">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#stock">Available Stock</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <!-- END NAV BAR -->
+
+
+        <!-- START JUMBOTRON -->
+        <div id="jumbotron" class="jumbotron text-center">
+            <h1 class="jumboText">Farris Flowers</h1>
+            <p id="padding1" class="jumboText">
+                We have all flowers you can think of, and if we don't have it in shop we can order them for you!
+            </p> 
+        </div>
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3><u>Flowers</u></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><u>Bouquets</u></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><u>Special Offers</u></h3>        
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- END JUMBOTRON -->
+
+
+        <!-- START SCROLL TO TOP BUTTON -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <!-- END SCROLL TO TOP BUTTON-->
+
+
+        <!-- START MODAL FORM SECTION -->
+        <button onclick="document.getElementById('id01').style.display='block'">Want to get notified about our products? Sign up here!</button>
+
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Close Form</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email"><b><u>Email</u></b></label>
+                    <input type="text" placeholder="youremail@youremail.com" name="email" id="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+
+                    <label for="psw"><b><u>Password</u></b><br> - Must include: at least one upper case letter, one lower case, one digit, one special character, and be a minimum of 8 characters long.</label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw"
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required>
+
+                    <label for="psw-repeat"><b><u>Repeat Password</u></b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signup">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <!-- END MODAL FORM SECTION --><br><br><br><br>
+
+
+        <!-- START ABOUT US SECTION -->
+        <section class="sectionBox">
+            <h2 class="centerText" id="about"><b><u>About Us</u></b></h2><br>
+            <div class="card">
+                <img src="images/femaleShopOwner.jpg" alt="Avatar" style="width:100%">
+                <div class="container1">
+                    <h4 class="marginRight"><b>Jamie Spolk</b></h4>
+                    <p class="marginRight">Owner</p>
+                </div>
+            </div>
+
+            <div class="card" id="maleShopOwner">
+                <img src="images/maleShopOwner.jpg" alt="Avatar" style="width:100%">
+                <div class="container1">
+                    <h4 class="marginRight"><b>Jeremy Flank</b></h4>
+                    <p class="marginRight">Co-Owner</p>
+                </div>
+            </div><br><br><br>
+            <p class="centerText" id="fontSizing1"><b><u>OUR HOURS</u></b></p><br>
+            <p id="fontSizing" class="centerText">Monday - Friday: 8:30 am  to  5:30 pm Saturday: 9:00 am  to  3:00 pm</p><br>
+             <p class="centerText">
+                APPOINTMENTS AFTER HOURS AVAILABLE UPON REQUEST. WE ARE CLOSED ON SUNDAYS. TO HELP 
+                ASSURE ON-TIME DELIVERY DURING THE BUSY HOLIDAY SEASON, PLACE YOUR ORDER AT LEAST 1 
+                DAY PRIOR TO THE FOLLOWING MAJOR HOLIDAYS: THANKSGIVING DAY, CHRISTMAS DAY, NEW 
+                YEAR'S DAY, VALENTINE'S DAY, EASTER, ADMINISTRATIVE PROFESSIONALS WEEK, MOTHER'S DAY, 
+                MEMORIAL DAY, FATHER'S DAY, INDEPENDENCE DAY AND LABOR DAY. OUR SHOP WILL ALWAYS BE 
+                CLOSED ON THE FOLLOWING HOLIDAYS: THANKSGIVING DAY, CHRISTMAS EVE, CHRISTMAS DAY, 
+                NEW YEAR'S DAY, EASTER, MEMORIAL DAY, INDEPENDENCE DAY AND LABOR DAY.<br>
+                <b><u>- No online purchases -</u></b>
+             </p>   
+            <br><br>
+            <section class="centerText" id="sectionBox1">
+                <h4 class="centerText"><u>User Rating</u></h4>
+                <span class="fa fa-star checked" id="star"></span>
+                <span class="fa fa-star checked" id="star1"></span>
+                <span class="fa fa-star checked" id="star2"></span>
+                <span class="fa fa-star checked" id="star3"></span>
+                <span class="fa fa-star checked" id="star4"></span>
+                <br><br>
+                <p class="centerText">
+                    Locally owned and operated. We are convieniently located on the southwest 
+                    corner of Eagle Road and Hightop Road. As a full service floral boutique, we 
+                    love our day to day designs along with creating cohesive custom designs for any 
+                    special event. Plants, gifts, gift baskets are one of our many specialties. Knowing 
+                    that sometimes special days get misplaced in our memories :), we are here to help with 
+                    last minute gift ideas. Our inventory is always rotating, so just give us a call with 
+                    selection questions.
+                </p>
+            </section>
+        </section>
+        <!-- END ABOUT US SECTION --><br><br><br><br>
+
+
+        <!-- START IMAGE GALLERY SECTION -->
+        <section class="sectionBox" id="stock">
+            <h2 class="centerText"><b><u>Flowers Currently Available This Season</u></b></h2><br><br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                </ol>
+                
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="images1" src="images/flowersFixed/flower1.png" alt="Picture of purple/blue flower">
+                    </div>
+                
+                    <div class="item">
+                        <img class="images1" src="images/flowersFixed/flower2.png" alt="Picture of pink flower">
+                    </div>
+                
+                    <div class="item">
+                        <img class="images1" src="images/flowersFixed/flower3.png" alt="Picture of white flower">
+                    </div>
+
+                    <div class="item">
+                        <img class="images1" src="images/flowersFixed/flower4.png" alt="Picture of red rose">
+                    </div>
+
+                    <div class="item">
+                        <img class="images1" src="images/flower5.jpg" alt="Picture of small blue flowers">
+                    </div>
+
+                    <div class="item">
+                        <img class="images1" src="images/flowersFixed/flower6.png" alt="Picture of black rose">
+                    </div>
+
+                    <div class="item">
+                        <img class="images1" src="images/flowersFixed/flower7.png" alt="Picture of small purple flowers">
+                    </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <!-- END IMAGE GALLERY SECTION --><br><br><br><br>
+
+
+        <!-- START ACCORDION SECTION -->
+        <section class="sectionBox" id="faq">
+            <h2 class="centerText"><b><u>Facts And Questions</u></b></h2><br>
+
+            <button class="accordion">How often do you recieve new stock?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">What is your selection of flowers each season?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">Is there a limit to how many flowers I can purchase?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">Can I track my shipped order to your shop?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">Tips on basic flower care?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">How can I refer friends and family?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Eu augue ut lectus arcu bibendum. Elementum pulvinar etiam non quam lacus. Malesuada fames ac turpis egestas integer eget aliquet. Urna duis convallis convallis tellus id interdum velit. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Lacus laoreet non curabitur gravida arcu. Aliquam ut porttitor leo a diam sollicitudin tempor id. Cras sed felis eget velit aliquet sagittis id consectetur purus. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Quam id leo in vitae turpis. Morbi leo urna molestie at elementum eu facilisis sed odio. Odio eu feugiat pretium nibh ipsum consequat nisl vel pretium.</p>
+            </div>
+
+            <button class="accordion">Is there online ordering?</button>
+            <div class="panel">
+                <p>We do NOT have online ordering, but we can take orders in person, over email, or over the phone. You can also track your shipment of out of stock flowers from our suppliers to our shop!</p>
+            </div>
+        </section>
+        <!-- END ACCORDION SECTION --><br><br><br><br>
+
+
+        <!-- START CONTACT SECTION -->
+        <section class="sectionBox">
+            <h2 class="centerText"><b><u>Contact Form</u></b></h2><br>
+            <div class="container2" id="contact">
+                <form action="action_page.php">
+                
+                    <label for="FirstName">First Name</label>
+                    <input type="text" id="FirstName" name="FirstName" placeholder="Your name..">
+                
+                    <label for="LastName">Last Name</label>
+                    <input type="text" id="LastName" name="LastName" placeholder="Your last name..">
+                
+                    <label for="ContactReason">Reason For Contact</label>
+                    <select id="ContactReason" name="ContactReason">
+                    <option value="Availability Question(s)">Availability Question(s)</option>
+                    <option value="Flower Care Question(s)">Flower Care Question(s)</option>
+                    <option value="Shop Question(s)">Shop Question(s)</option>
+                    <option value="Other">Other</option>
+                    </select>
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                
+                </form>
+            </div>
+        </section>
+        <!-- END CONTACT SECTION --><br><br><br><br><br><br>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>
+                &#169; 2021 Farris Flowers<br>
+                Email: <a href="mailto:FarrisFlowers@gmail.com">FarrisFlowers@gmail.com</a><br>
+                Phone: <a href="tel:+12088545633">(208)-854-5633</a><br>
+                2275 Hightop Rd, Meridian, Idaho 83642
+            </p>
+        </div>
+        <!-- END FOOTER -->
+
+
+        <!-- JavaScript File -->
+        <script src="js/accordion.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/scroll2TopBtn.js"></script>
+    </body>
+</html>
