@@ -1,0 +1,32 @@
+<!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 3-29-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 3-29-2021
+
+        #Modification Log:
+            - 3-31-2021: Added rental component.
+    =========================================================================================================================================================-->
+
+<article class="rental">
+  <Rental::Image
+    src={{@rental.image}}
+    alt="A picture of {{@rental.title}}"
+  />
+  <div class="details">
+    <h3>{{@rental.title}}</h3>
+    <div class="detail owner">
+      <span>Owner:</span> {{@rental.owner}}
+    </div>
+    <div class="detail type">
+      <span>Type:</span> {{@rental.type}}
+    </div>
+    <div class="detail location">
+      <span>Location:</span> {{@rental.city}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Number of bedrooms:</span> {{@rental.bedrooms}}
+    </div>
+  </div>
+</article>

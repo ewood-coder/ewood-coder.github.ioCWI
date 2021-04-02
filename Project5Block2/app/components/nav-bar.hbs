@@ -1,0 +1,30 @@
+<!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 3-29-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 3-29-2021
+
+        #Modification Log:
+            - 3-30-2021: Added navbar component.
+    =========================================================================================================================================================-->
+
+<nav class="menu">
+  <LinkTo @route="index" class="menu-index">
+    <h1>SuperRentals</h1>
+  </LinkTo>
+  <div class="links">
+    <LinkTo @route="about" class="menu-about">
+      About
+    </LinkTo>
+    <LinkTo @route="faq" class="menu-contact">
+      FAQ
+    </LinkTo>
+    <LinkTo @route="newsletter" class="menu-contact">
+      Newsletter
+    </LinkTo>
+    <LinkTo @route="contact" class="menu-contact">
+      Contact
+    </LinkTo>
+  </div>
+</nav>
