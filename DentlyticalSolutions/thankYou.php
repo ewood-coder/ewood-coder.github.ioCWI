@@ -1,15 +1,15 @@
 <?php
     
-    $fMessage = filter_input(INPUT_POST, 'Message');
-    $lName = filter_input(INPUT_POST, 'Name');
+    $Message = filter_input(INPUT_POST, 'Message');
+    $Name = filter_input(INPUT_POST, 'Name');
     $Email = filter_input(INPUT_POST, 'Email');
     $Phone = filter_input(INPUT_POST, 'Phone');
-    $ReasonForContact = filter_input(INPUT_POST, 'Reason For Contact');
-    /* echo "Fields: " . $visitor_name . $visitor_email . $visitor_msg;  */
+    $ReasonForContact = filter_input(INPUT_POST, 'ReasonForContact');
+    // echo "Fields: " . $Message . $Name . $Email . $Phone . $ReasonForContact;
     
     // Validate inputs
-    if ($fname == null || $lname == null || $reason == null || 
-            $email == null || $comments == null) {
+    if ($Message == null || $Name == null || $Email == null || 
+            $Phone == null || $ReasonForContact == null) {
         $error = "Invalid input data. Check all fields and try again.";
         /* include('error.php'); */
         $error = "Invalid input data. Check all fields and try again.";
@@ -32,16 +32,16 @@
             }
 
             // Add the product to the database  
-            $query = 'INSERT INTO visit
-                         (visit_fname, visit_lname, visit_email, visit_reason, visit_msg, visit_date, employee_id)
-                      VALUES
-                         (:fname, :lname, :email, :reason, :comments, NOW(), 1)';
+            $query = 'INSERT INTO contact
+	(contact_msg, your_name, email_address, phone_number, contact_reason, contact_date, employee_id)
+VALUES
+	(:Message, :Name, :Email, :Phone, :ReasonForContact , NOW(), 1);';
             $statement = $db->prepare($query);
-            $statement->bindValue(':fname', $fname);
-            $statement->bindValue(':lname', $lname);
-            $statement->bindValue(':email', $email);
-            $statement->bindValue(':reason', $reason);
-            $statement->bindValue(':comments', $comments);
+            $statement->bindValue(':Message', $Message);
+            $statement->bindValue(':Name', $Name);
+            $statement->bindValue(':Email', $Email);
+            $statement->bindValue(':Phone', $Phone);
+            $statement->bindValue(':ReasonForContact', $ReasonForContact);
             $statement->execute();
             $statement->closeCursor();
             /* echo "Fields: " . $visitor_name . $visitor_email . $visitor_msg; */

@@ -102,25 +102,25 @@
                         <div>
                             <h2 id="textboxFontSize1"><u>Contact Us</u></h2> 
                             <p id="textboxFontSize2">Please send your message below. We will get back to you at the earliest!</p>
-                            <form role="form" action="mailto:DentlyticalSolutions@gmail.com" method="post" enctype="text/plain">
+                            <form role="form" action="thankYou.php" method="post">
                                 <div class="row">
                                     <div class="textBoxes">
                                         <label for="textArea"><b class="robotoR">Message:</b></label><br>
-                                        <textarea id="textArea" name="Message " maxlength="6000" rows="12"></textarea>
+                                        <textarea id="textArea" name="Message" maxlength="300" rows="12"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="textBoxes">
                                         <br><label for="yourName"><b class="robotoR">Your Name:</b></label><br>
-                                        <input type="text" id="yourName" name="Name " pattern="^[a-z\sA-Z]+" required>
+                                        <input type="text" id="yourName" name="Name" pattern="^[a-z\sA-Z]+" required>
                                     </div>
                                     <div class="textBoxes"> <!-- Has built in regex -->
                                         <br><label for="email"><b class="robotoR">Email:</b></label><br>
-                                        <input type="email" id="email" name="Email " placeholder="YourEmail@me.com" required>
+                                        <input type="email" id="email" name="Email" placeholder="YourEmail@me.com" required>
                                     </div>
                                     <div class="textBoxes">
                                         <br><label for="phone"><b class="robotoR">Phone:</b></label><br>
-                                        <input type="tel" id="phone" name="Phone " pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                        <input type="tel" id="phone" name="Phone" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                                         placeholder="(# # #)  -  # # #  -  # # # #" required>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                             <u><b>Reason For Contact:</b></u>
                                         </span>
                                     </h4>
-                                    <select id="dropDown1" name="Reason For Contact ">
+                                    <select id="dropDown1" name="ReasonForContact">
                                         <optgroup class="dropDown3" label="Reason For Contact:">
                                             <option value = " N/A">- N/A</option>
                                             <option value = " Question">- Question</option>
