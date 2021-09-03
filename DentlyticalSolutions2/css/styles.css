@@ -1,0 +1,1705 @@
+/*=====================================================================================================================================================
+                                            MODIFICATION LOG
+#Original Author: Emma L. Wood
+#Date Created: 1-18-2021
+#Date Mod Log was Created for File: 2-4-2021
+#Last Modified by: Emma L. Wood
+#Date Last Modified: 2-17-2021
+
+#Modification Log:
+    - PREVIOUS LOGS CAN BE FOUND ON HTML
+    - 2-4-2021: Added styling for desktop navbar | Fixed the really annoying bug with my mobile and tablet nav breaking | Added styling for accordion.
+    - 2-5-2021: Added CSS for slideshow and images (all viewports).
+    - 2-12-2021: Fixed scaling issues with contact page on Desktop | Changed styling on contact page | Changed styling on Newsletter page.
+    - 2-15-2021: Fixed an issue with the submit button not scaling on smaller desktop screens.
+    - 2-17-2021: Added styling for appointments href link on contact page | Added styling for NEW appointments page |
+                 Fixed issue with buttons not scaling on appointments.html | Added styling for thank you pages.
+=========================================================================================================================================================*/
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media only screen and (min-width: 740px) {
+    /*====================================================
+                        DESKTOP NAVBAR
+    ======================================================*/
+    .topNav1 {
+        width: 100%;
+        height: 150px;
+        background: rgb(16, 115, 243);
+    }
+    #Links {
+        text-align: center;
+        font-family: 'roboto', Arial, Helvetica;
+        padding-top: 35px;
+        font-size: 28px;
+    }
+    #Links > ul > li {
+        display: inline-flex;
+        justify-content: space-around;
+    }
+
+    #absolute {
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .paddingRight1 {
+        text-decoration: none;
+        padding: 20px 20px 20px 20px;
+        color: rgb(255, 255, 255);
+    }
+    .paddingRight1:hover {
+        border-radius: 35px;
+        background: rgb(2, 207, 235);
+        padding: 20px;
+    }
+    .paddingRight1:visited {
+        color: white;
+    }
+    #newsletter1 {
+        text-decoration: none;
+        padding: 20px 20px 20px 20px;
+        color: rgb(255, 255, 255);
+    }
+    #newsletter1:hover {
+        border-radius: 35px;
+        background: rgb(2, 207, 235);
+        padding: 20px;
+    }
+    #newsletter1:visited {
+        color: white;
+    }
+    .whiteColor {
+        color: white;
+    }
+    a:link {
+        color: white;
+    }
+
+
+    /*=====================================================
+                        HAMBURGER MENU
+    =======================================================*/
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(16, 115, 243);
+        position: relative;
+        font-family: 'robotoregular', Arial, sans-serif;
+        display: none;
+    }
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 17px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    a.icon {
+        color: rgb(16, 115, 243);
+        padding: 60px 60px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: rgb(16, 115, 243);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-bottom: 61px;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: white;
+        color: rgb(16, 115, 243);
+    }
+    a.active {
+        padding: 60px 60px;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: rgb(16, 115, 243);
+        color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+
+    #hideOnDesktop {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+
+
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 100px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 20px;
+    
+        position: absolute;
+        top: 5px;
+        margin-left: 125px;
+        margin-top: 5px;
+        font-family: 'roboto', Arial, Helvetica;
+    }
+
+    /*===============================
+                TEXT BOXES 
+    ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes3 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: double;
+        font-family: 'robotoregular', Arial, sans-serif;
+        text-align: center;
+
+        padding: 0px 15px 15px 15px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes4 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: double;
+        font-family: 'robotoregular', Arial, sans-serif;
+        text-align: center;
+
+        padding: 0px 15px 15px 15px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes5 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 50px;
+        margin-top: 5px;
+    }
+    #offer {
+        text-align: center;
+        font-size: xx-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: xx-large;
+    }
+    .insurances {
+        font-size: 30px;
+    }
+    .textboxFontSize {
+        font-size: 25px;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 20px;
+    }
+    #doctorShannon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #doctorShannonMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    #staffLink {
+        text-align: center;
+        font-size: x-large;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+    .decoration {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:hover {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:visited {
+        color: rgb(218, 1, 1);
+    }
+
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+
+        color: white;
+    }
+
+    /*=====================================
+                  STAFF PAGE
+    =======================================*/
+    .staffAuto {
+        margin: 0 auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+    .textCenter11 {
+        text-align: center;
+        font-size: x-large;
+    }
+
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    #accordion {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion1 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion2 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .buttonLabel {
+        background-color: rgb(218, 218, 218);
+        margin-bottom: 10px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .blueBack2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+
+        color: white;
+    }
+
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        margin-left: 435px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        margin-left: 10px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #textArea {
+        min-width: 70%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize2 {
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #map {
+        padding: 20px 0px 10px 0px;
+        border:0;
+        width: 100%;
+    }
+    #makeRed {
+        color: rgb(218, 1, 1);
+        font-size: 20px;
+    }
+    #makeRed:hover {
+        color: rgb(218, 1, 1);
+    }
+    #makeRed:visited {
+        color: rgb(218, 1, 1);
+    }
+    #h1Increase {
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+
+    /*=====================================
+                APPOINTMENT PAGE
+    =======================================*/
+    .boxes6 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .checkMark {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 10px 10px 10px;
+        margin: 0 auto;
+    }
+    #dropDown4 {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown5 {
+        color: black;
+        font-size: large;
+    }
+
+
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: xx-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #join_list {
+        margin-right: 30px;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #clear_form {
+        margin-top: 40px;
+    }
+    #join_list {
+        margin-top: 40px;
+    }
+    /*========================================
+                THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+
+
+    /*========================================
+                    FOOTER LOGOS 
+    =========================================*/
+    .facebook {
+        float: left;
+        padding-top: 15px;
+        padding-left: 50px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 50px;
+        padding-top: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*======================================================================================*/
+
+
+
+
+
+
+
+
+
+
+/*==================================
+            TABLET STYLING
+====================================*/
+
+
+@media only screen and (max-width: 739px) and (min-width: 460px) {
+    .topNav1 {
+        display: none;
+    }
+
+    /*=========================================
+                 HAMBURGER MENU
+    =========================================*/
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(16, 115, 243);
+        position: relative;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 17px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    a.icon {
+        color: rgb(16, 115, 243);
+        padding: 30px 30px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background:white;
+        color: rgb(16, 115, 243);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 60px;
+        padding-bottom: 61px;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: white;
+        color: rgb(16, 115, 243);
+    }
+    a.active {
+        padding: 77px 77px;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: rgb(16, 115, 243);
+        color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+    .whiteColor {
+        color: white;
+    }
+    #hideOnMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+    
+    
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 100px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 20px;
+    
+        position: absolute;
+        top: 5px;
+        margin-left: 125px;
+        margin-top: 5px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /*===============================
+                TEXT BOXES 
+     ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes4 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        border-style: double;
+        font-family: 'robotoregular', Arial, sans-serif;
+        text-align: center;
+
+        padding: 0px 15px 15px 15px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes5 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 40px;
+        margin-top: 5px;
+        margin-right: 45px;
+    }
+    #offer {
+        text-align: center;
+        font-size: xx-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: xx-large;
+    }
+    .insurances {
+        font-size: 30px;
+    }
+    .textboxFontSize {
+        font-size: 25px;
+    }
+    #doctorShannon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #doctorShannonMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 20px;
+    }
+    #staffLink {
+        text-align: center;
+        font-size: x-large;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+    .decoration {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:hover {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:visited {
+        color: rgb(218, 1, 1);
+    }
+    
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    
+    /*=====================================
+                  STAFF PAGE
+    =======================================*/
+    .staffAuto {
+        margin: 0 auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        height: 28vmax;
+    }
+    .textCenter11 {
+        text-align: center;
+        font-size: large;
+    }
+
+
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    #accordion {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion1 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion2 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .buttonLabel {
+        background-color: rgb(218, 218, 218);
+        margin-bottom: 10px;
+        padding: 20px 20px 20px 20px;
+    }
+    .blueBack2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        float: right;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        float: right;
+        margin-right: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #textArea {
+        min-width: 98%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #map {
+        padding: 30px 10px 10px 10px;
+        border:0;
+        width: 96%;
+    }
+    #makeRed {
+        color: rgb(218, 1, 1);
+        font-size: 20px;
+    }
+    #makeRed:hover {
+        color: rgb(218, 1, 1);
+    }
+    #makeRed:visited {
+        color: rgb(218, 1, 1);
+    }
+    #h1Increase {
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+
+    /*=====================================
+                APPOINTMENT PAGE
+    =======================================*/
+    .boxes6 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 60px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .checkMark {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 10px 10px 10px;
+        margin: 0 auto;
+        display: none;
+    }
+    #dropDown4 {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown5 {
+        color: black;
+        font-size: large;
+    }
+    
+    
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: x-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #join_list {
+        margin-right: 30px;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .leftWall {
+        text-align: left;
+        font-size: x-large;
+    }
+    #clear_form {
+        margin-top: 40px;
+    }
+    #join_list {
+        margin-top: 40px;
+    }
+    /*========================================
+                 THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+    
+    
+    /*========================================
+                    FOOTER LOGOS 
+     =========================================*/
+    .facebook {
+        float: left;
+        padding-top: 15px;
+        padding-left: 7px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 7px;
+        padding-top: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*======================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+/*==================================
+            MOBILE STYLING
+====================================*/
+
+@media only screen and (max-width: 459px) {
+    .topNav1 {
+        display: none;
+    }
+
+    /*=====================================================
+                        HAMBURGER MENU
+    =======================================================*/
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(16, 115, 243);
+        position: relative;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 17px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    a.icon {
+        color: rgb(16, 115, 243);
+        padding: 30px 30px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background:white;
+        color: rgb(16, 115, 243);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 60px;
+        padding-bottom: 61px;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: white;
+        color: rgb(16, 115, 243);
+    }
+    a.active {
+        padding: 77px 77px;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: rgb(16, 115, 243);
+        color: rgb(16, 115, 243);
+    }
+    a.active:hover {
+        background-color: rgb(16, 115, 243);
+    }
+    .whiteColor {
+        color: white;
+    }
+    #hideOnMobile {
+        visibility: hidden;
+        position: absolute;
+    }
+    body {
+        margin: 0;
+        background: url("../images/background9.png");
+    }
+    html {
+        background: url("../images/background9.png");
+    }
+    
+    
+    /*=============================
+            HEADER & FOOTER 
+    ===============================*/
+    footer {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        
+        width:100%;
+        height: 200px;
+        background: rgb(16, 115, 243);
+        color: white;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    footer > p {
+        padding-top: 7px;
+    }
+    .fixFooter {
+        padding-top: 0px;
+        margin-top: 7px;
+    }
+    #logo {
+        padding-left: 10px;
+        position: absolute;
+    }
+    #timeDate {
+        color: white;
+        font-size: 20px;
+    
+        position: absolute;
+        top: 5px;
+        margin-left: 125px;
+        margin-top: 5px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    
+    /*===============================
+                TEXT BOXES 
+     ================================*/
+    .boxes { /* HAS TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes1 { /* NO TEXT ALIGN CENTER */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes2 { /* HAS NO ADDITIONAL PADDING ON TOP */
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .boxes4 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        font-family: 'robotoregular', Arial, sans-serif;
+        text-align: center;
+
+        padding: 0px 10px 10px 10px;
+
+        background-color: rgb(255, 255, 255);
+    }
+    .boxes5 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    #noUnderline {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'Roboto', sans-serif, 'Times New Roman';
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    
+        background: radial-gradient(rgb(255, 255, 255) 30%, rgb(16, 115, 243));
+    }
+    #indexLI {
+        list-style: none;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-right: 45px;
+    }
+    #offer {
+        text-align: center;
+        font-size: x-large;
+    }
+    #offer1 {
+        text-align: center;
+        font-size: x-large;
+    }
+    .insurances {
+        font-size: 20px;
+    }
+    .textboxFontSize {
+        font-size: 15px;
+    }
+    #doctorShannon {
+        visibility: hidden;
+        position: absolute;
+    }
+    #doctorShannonMobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .changeSize {
+        font-size: 15px;
+    }
+    #staffLink {
+        text-align: center;
+        font-size: x-large;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+    .decoration {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:hover {
+        color: rgb(218, 1, 1);
+    }
+    .decoration:visited {
+        color: rgb(218, 1, 1);
+    }
+    
+    /*=============================
+            COLORED SECTIONS
+    ===============================*/
+    .blueBack {
+        margin-top: 30px;
+    
+        text-align: center;
+        border-style: solid;
+    
+        padding: 15px 15px 15px 15px;
+        padding-top: 3px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    
+    
+    /*=====================================
+                  STAFF PAGE
+    =======================================*/
+    .staffAuto {
+        margin: 0 auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        height: 20vmax;
+    }
+    .textCenter11 {
+        text-align: center;
+        font-size: medium;
+    }
+
+    /*=====================================
+                    FAQ PAGE
+    =======================================*/
+    #accordion {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion1 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    #accordion2 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .buttonLabel {
+        background-color: rgb(218, 218, 218);
+        margin-bottom: 10px;
+        padding: 20px 20px 20px 20px;
+    }
+    .blueBack2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+        text-align: center;
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+    
+        padding: 15px 15px 15px 15px;
+    
+        background-color: rgb(16, 115, 243);
+        border-color: rgb(255, 255, 255);
+        border-width: 5px;
+    
+        color: white;
+    }
+    #FAQheader {
+        font-size: 25px;
+    }
+    
+    /*=====================================
+                CONTACT PAGE
+    =======================================*/
+    #dropDown {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown1 {
+        font-size: large;
+        width: 70%;
+    }
+    .dropDown3 {
+        color: black;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton {
+        float: right;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #submit {
+        float: right;
+        margin-right: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    #textArea {
+        min-width: 98%;
+    }
+    .robotoR {
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize1 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #textboxFontSize2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    #map {
+        padding: 30px 5px 5px 5px;
+        border:0;
+        width: 98%;
+    }
+    #makeRed {
+        color: rgb(218, 1, 1);
+        font-size: 20px;
+    }
+    #makeRed:hover {
+        color: rgb(218, 1, 1);
+    }
+    #makeRed:visited {
+        color: rgb(218, 1, 1);
+    }
+    #h1Increase {
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+
+    /*=====================================
+                APPOINTMENT PAGE
+    =======================================*/
+    .boxes6 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        border-style: solid;
+        font-family: 'robotoregular', Arial, sans-serif;
+
+        padding: 15px 15px 60px 15px;
+        padding-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(16, 115, 243);
+        border-width: 5px;
+    }
+    .checkMark {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 10px 10px 10px;
+        margin: 0 auto;
+        display: none;
+    }
+    #dropDown4 {
+        padding-bottom: 10px;
+        color: black;
+    }
+    #dropDown5 {
+        color: black;
+        font-size: large;
+    }
+    
+
+    /*=====================================
+                NEWSLETTER PAGE
+    =======================================*/
+    .h11 {
+        text-align: center;
+        font-size: x-large;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .paddingLeft {
+        text-align: center;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    section > ul > li {
+        list-style-type: none;
+    }
+    .resetButton {
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .resetButton:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .submit {
+        margin-left: 15px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        font-family: 'robotoregular', Arial, sans-serif;
+    }
+    .submit:hover {
+        background-color:rgb(201, 201, 201);
+    }
+    .leftWall {
+        text-align: left;
+        font-size: x-large;
+    }
+    #clear_form {
+        margin-top: 40px;
+    }
+    #join_list {
+        margin-top: 40px;
+        margin-right: 30px;
+    }
+    /*========================================
+                 THANK YOU PAGE
+    ==========================================*/
+    #footer {
+        position: fixed;
+    }
+    
+    
+    /*========================================
+                    FOOTER LOGOS 
+     =========================================*/
+     .facebook {
+        float: left;
+        padding-left: 105px;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
+    .twitter {
+        float: right;
+        padding-right: 105px;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
+}
