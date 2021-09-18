@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dentlytical Solutions | Contact</title> <!-- This is an original name (used name generator) -->
+    <meta content="Proud to offer the highest level of dental care to our community." name="description">
+    <meta content="Dental Exams & Check Ups, Dental Insurance, Cosmetic Dentistry, Restorative Dentistry" name="keywords">
+    <meta name="author" content="Emma Wood">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JavaScript File -->
+    <script src="js/clock.js" defer></script>
+    <script src="js/form.js"></script>
+    <script src="js/hamburger.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/tooth.png"/>
+    <!-- Favicon taken from images on Google:
+         Dentist in Santa Monica | Drake Dental -->
+
+    <!--  Reference for website taken from https://dentist.boisedentalartsid.com/?
+        gclid=Cj0KCQiA0rSABhDlARIsAJtjfCcjn6lwlftKbcq5HZWLuM9x8zzqsrf7dz4_UsglnzfP4DPQuat
+        K5i4aAhUfEALw_wcB  -->
+
+    <!--=====================================================================================================================================================
+                                            MODIFICATION LOG
+        #Original Author: Emma L. Wood
+        #Date Created: 1-19-2021
+        #Date Mod Log was Created for File: 2-4-2021
+        #Last Modified by: Emma L. Wood
+        #Date Last Modified: 2-17-2021
+
+        #Modification Log:
+            - PREVIOUS LOGS CAN BE FOUND ON HTML
+            - 2-4-2021: Added html for desktop navbar
+            - 2-12-2021: Added new section for form to add styling
+            - 2-17-2021: Added link to appointments page PLUS styling | Fixed issue where I forgot to include CDN link.
+    =========================================================================================================================================================-->
+</head>
+<body>
+    <header>
+        <!-- DESKTOP NAVBAR -->
+        <nav class="topNav1">
+            <img id="absolute" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            
+            <div id="Links">
+                <ul>
+                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+                    <li><a class="paddingRight1" href="contact.html">Contact</a></li>
+                    <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
+                    <li><a id ="newsletter1" href="admin.php">Admin</a></li>
+                    <li><a id ="newsletter1" href="listemployees.php">ListEmp</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <!--******************************************************************************************-->
+
+        <!-- TABLET/MOBILE NAVBAR -->
+        <div class="topnav">
+            <p id="logo">
+                <img id="hideOnMobile" src="images/dentlyticalSolutionsLogo3.png" alt="Picture of tooth logo">
+                <img id="hideOnDesktop" src="images/mobileLogo100.png" alt="Picture of tooth logo">
+            </p>
+            <a class="active"></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="newsletter.html">Newsletter</a>
+                <a href="admin.php">Admin</a>
+                <a href="listemployees.php">ListEmp</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="timeDate"></div>
+    </header>
+
+    <main>
+        <section class="boxes5">
+            <h1 id="h1Increase">Looking to make an appointment?</h1>
+            <p>
+                <a id="makeRed" href="appointment.html">Click on this link to request an appointment.</a>
+            </p>
+        </section>
+
+        <!-- START CONTACT FORM -->
+        <section class="boxes1">
+            <section class="boxes3">
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            <h2 id="textboxFontSize1"><u>Contact Us</u></h2> 
+                            <p id="textboxFontSize2">Please send your message below. We will get back to you at the earliest!</p>
+                            <form role="form" action="thankYou.php" method="post">
+                                <div class="row">
+                                    <div class="textBoxes">
+                                        <label for="textArea"><b class="robotoR">Message:</b></label><br>
+                                        <textarea id="textArea" name="Message" maxlength="300" rows="12"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="textBoxes">
+                                        <br><label for="yourName"><b class="robotoR">Your Name:</b></label><br>
+                                        <input type="text" id="yourName" name="Name" pattern="^[a-z\sA-Z]+" required>
+                                    </div>
+                                    <div class="textBoxes"> <!-- Has built in regex -->
+                                        <br><label for="email"><b class="robotoR">Email:</b></label><br>
+                                        <input type="email" id="email" name="Email" placeholder="YourEmail@me.com" required>
+                                    </div>
+                                    <div class="textBoxes">
+                                        <br><label for="phone"><b class="robotoR">Phone:</b></label><br>
+                                        <input type="tel" id="phone" name="Phone" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                        placeholder="(# # #)  -  # # #  -  # # # #" required>
+                                    </div>
+                                </div>
+                                <!-- DROPDOWN MENU -->
+                                <div id="dropDown" class="textBoxes">
+                                    <h4 class="dropDown3">
+                                        <span>
+                                            <u><b>Reason For Contact:</b></u>
+                                        </span>
+                                    </h4>
+                                    <select id="dropDown1" name="ReasonForContact">
+                                        <optgroup class="dropDown3" label="Reason For Contact:">
+                                            <option value = " N/A">- N/A</option>
+                                            <option value = " Question">- Question</option>
+                                            <option value = " Employment">- Employment</option>
+                                            <option value = " Other">- Other</option>
+                                        </optgroup>
+                                    </select><br>
+                                </div>
+                                <!-- END DROPDOWN MENU -->
+                                <div class="row">
+                                    <div class="textBoxes">
+                                        <input id="resetButton" type="reset">
+                                        <button id="submit" type="submit">Send &rarr;</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your message successfully!</h3> </div>
+                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END CONTACT FORM -->
+            </section>
+
+            <!-- GOOGLE MAPS -->
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.073835457296!2d-116.35641539091034!3d43.584178373933305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54ae51366f9c5ef1%3A0x6f8c06ca0760e52!2s2275%20S%20Eagle%20Rd%2C%20Meridian%2C%20ID%2083642!5e0!3m2!1sen!2sus!4v1611804570360!5m2!1sen!2sus" width="1800" height="500" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="facebook" src="images/facebook.png" alt="Facebook Link"></a>
+        <a href="https://twitter.com/" target="_blank"><img class="twitter" src="images/twitter.png" alt="Twitter Link"></a>
+        <p id="fixFooter">
+            &#169; 2021 Dentlytical Solutions<br>
+            Email: <a class="whiteColor" href="mailto:DentlyticalSolutions@gmail.com">DentlyticalSolutions@gmail.com</a><br>
+            Phone: <a class="whiteColor" href="tel:+12088545633">(208)-854-5633</a><br>
+            2275 Eagle Rd, Meridian, Idaho 83642
+        </p>
+    </footer>
+</body>
+</html>
