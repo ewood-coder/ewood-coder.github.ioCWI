@@ -603,6 +603,13 @@
         padding-right: 50px;
         padding-top: 15px;
     }
+    
+/*    =====================================
+                ERROR PAGE
+    =======================================
+    .pageError span {
+        margin-left: 100px;
+    }*/
 }
 
 

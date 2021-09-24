@@ -1,51 +1,12 @@
 <?php
+/* ******************************************************************
+ * Date         Name        Description
+ * --------     ---------   ----------------------------------------
+ * 9/21/21      Emma        - Initial startup of errorpage functions.
+ * 9/23/21      Emma        - Connected error page to contact form
+ *                            and updated html for error page.
+ * ******************************************************************/
     
-    $fMessage = filter_input(INPUT_POST, 'Message');
-    $lName = filter_input(INPUT_POST, 'Name');
-    $Email = filter_input(INPUT_POST, 'Email');
-    $Phone = filter_input(INPUT_POST, 'Phone');
-    $ReasonForContact = filter_input(INPUT_POST, 'Reason For Contact');
-    /* echo "Fields: " . $visitor_name . $visitor_email . $visitor_msg;  */
-    
-    // Validate inputs
-    if ($fname == null || $lname == null || $reason == null || 
-            $email == null || $comments == null) {
-        $error = "Invalid input data. Check all fields and try again.";
-        /* include('error.php'); */
-        echo "Form Data Error: " . $error; 
-        exit();
-        } else {
-            $dsn = 'mysql:host=localhost;dbname=ejdesign';
-            $username = 'ej_user';   //'ej_user';
-            $password = 'Pa$$w0rd';
-
-            try {
-                $db = new PDO($dsn, $username, $password);
-
-            } catch (PDOException $e) {
-                $error_message = $e->getMessage();
-                /* include('database_error.php'); */
-                echo "DB Error: " . $error_message; 
-                exit();
-            }
-
-            // Add the product to the database  
-            $query = 'INSERT INTO visit
-                         (visit_fname, visit_lname, visit_email, visit_reason, visit_msg, visit_date, employee_id)
-                      VALUES
-                         (:fname, :lname, :email, :reason, :comments, NOW(), 1)';
-            $statement = $db->prepare($query);
-            $statement->bindValue(':fname', $fname);
-            $statement->bindValue(':lname', $lname);
-            $statement->bindValue(':email', $email);
-            $statement->bindValue(':reason', $reason);
-            $statement->bindValue(':comments', $comments);
-            $statement->execute();
-            $statement->closeCursor();
-            /* echo "Fields: " . $visitor_name . $visitor_email . $visitor_msg; */
-
-}
-
 ?>
 
 
@@ -78,13 +39,13 @@
             
             <div id="Links">
                 <ul>
-                    <li><a class="paddingRight1" href="index.html">Home</a></li>
-                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+<!--                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>-->
                     <li><a class="paddingRight1" href="contact.html">Contact</a></li>
                     <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
                     <li><a id ="newsletter1" href="admin.php">Admin</a></li>
                     <li><a id ="newsletter1" href="listemployees.php">ListEmp</a></li>
-                  <!--  <li><a id ="newsletter1" href="errorpage.php">ErrorCheck</a></li> -->
+                    <li><a id ="newsletter1" href="errorpage.php">ErrorCheck</a></li>
                 </ul>
             </div>
         </nav>
@@ -100,13 +61,13 @@
             <a class="active"></a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="index.html">Home</a>
-                <a href="FAQ.html">FAQ</a>
+<!--                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>-->
                 <a href="contact.html">Contact</a>
                 <a href="newsletter.html">Newsletter</a>
                 <a href="admin.php">Admin</a>
                 <a href="listemployees.php">ListEmp</a>
-               <!-- <a href="errorpage.php">ErrorCheck</a> -->
+                <a href="errorpage.php">ErrorCheck</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -118,9 +79,22 @@
 
     <main>
         <section class="boxes1">
-            <img class ="checkMark" src="images/checkMark.png" alt="Confirmation Check Mark">
-            <p class="textCenter"><b>Your form has been submitted.</b><br></p>
-            <h1 class="h11">Thank you for joining our newsletter!</h1>
+            <style>
+                .pageError span {
+                    margin-left: 275px;
+                    color: red;
+                }
+            </style>
+            
+            <p class="pageError">  
+                <span><?php echo $error ?></span>
+            </p>
+            <br>
+            
+            <p class="textCenter"><b>There seems to have been an issue.</b><br></p>
+            <h1 class="h11">
+                Your form has NOT been submitted.
+            </h1>
         </section>
     </main>
 
@@ -136,3 +110,4 @@
     </footer>
 </body>
 </html>
+

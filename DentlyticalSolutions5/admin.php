@@ -5,9 +5,12 @@
  * 9/10/21      Emma        - Initial deployment of admin process.
  * 9/17/21      Emma        - Use database class, employee & 
  *                            visit functions.
+ * 9/22/21      Emma        - Added authentication & secure connection.
  * 
  * ******************************************************************/
 require_once('./model/database.php');
+require_once ('./util/secure_conn.php');
+require_once ('./util/valid_admin.php');
 require_once('./model/employee.php');
 require_once('./model/visit.php');
     
@@ -93,12 +96,13 @@ require_once('./model/visit.php');
             
             <div id="Links">
                 <ul>
-                    <li><a class="paddingRight1" href="index.html">Home</a></li>
-                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+<!--                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>-->
                     <li><a class="paddingRight1" href="contact.html">Contact</a></li>
                     <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
                     <li><a id ="newsletter1" href="admin.php">Admin</a></li>
                     <li><a id ="newsletter1" href="listemployees.php">ListEmp</a></li>
+                    <li><a id ="newsletter1" href="errorpage.php">ErrorCheck</a></li>
                 </ul>
             </div>
         </nav>
@@ -114,12 +118,13 @@ require_once('./model/visit.php');
             <a class="active"></a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="index.html">Home</a>
-                <a href="FAQ.html">FAQ</a>
+<!--                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>-->
                 <a href="contact.html">Contact</a>
                 <a href="newsletter.html">Newsletter</a>
                 <a href="admin.php">Admin</a>
                 <a href="listemployees.php">ListEmp</a>
+                <a href="errorpage.php">ErrorCheck</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">

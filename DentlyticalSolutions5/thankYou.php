@@ -2,8 +2,9 @@
 /* ******************************************************************
  * Date         Name        Description
  * --------     ---------   ----------------------------------------
- * 9/3/21      Emma         - Initial deployment of thankYou page.
+ * 9/3/21       Emma        - Initial deployment of thankYou page.
  * 9/17/21      Emma        - Use database and class functions?
+ * 9/23/21      Emma        - Connected error page to contact form.
  * 
  * ******************************************************************/
     
@@ -18,8 +19,8 @@
     if ($Message == null || $Name == null || $Email == null || 
             $Phone == null || $ReasonForContact == null) {
         $error = "Invalid input data. Check all fields and try again.";
-        /* include('error.php'); */
-        echo "Form Data Error: " . $error; 
+        include('errorpage.php');
+        /* echo "Form Data Error: " . $error; */  // THIS MAKES THE ERROR APPEAR ON THE PAGE
         exit();
         } else {
             require_once('./model/database.php');
@@ -78,12 +79,13 @@
             
             <div id="Links">
                 <ul>
-                    <li><a class="paddingRight1" href="index.html">Home</a></li>
-                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>
+<!--                    <li><a class="paddingRight1" href="index.html">Home</a></li>
+                    <li><a class="paddingRight1" href="FAQ.html">FAQ</a></li>-->
                     <li><a class="paddingRight1" href="contact.html">Contact</a></li>
                     <li><a id ="newsletter1" href="newsletter.html">Newsletter</a></li>
                     <li><a id ="newsletter1" href="admin.php">Admin</a></li>
                     <li><a id ="newsletter1" href="listemployees.php">ListEmp</a></li>
+                    <!-- <li><a id ="newsletter1" href="errorpage.php">ErrorCheck</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -99,12 +101,13 @@
             <a class="active"></a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-                <a href="index.html">Home</a>
-                <a href="FAQ.html">FAQ</a>
+<!--                <a href="index.html">Home</a>
+                <a href="FAQ.html">FAQ</a>-->
                 <a href="contact.html">Contact</a>
                 <a href="newsletter.html">Newsletter</a>
                 <a href="admin.php">Admin</a>
                 <a href="listemployees.php">ListEmp</a>
+              <!--  <a href="errorpage.php">ErrorCheck</a> -->
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -118,7 +121,7 @@
         <section class="boxes1">
             <img class ="checkMark" src="images/checkMark.png" alt="Confirmation Check Mark">
             <p class="textCenter"><b>Your form has been submitted.</b><br></p>
-            <h1 class="h11">Thank you for joining our newsletter!</h1>
+            <h1 class="h11">Thank you for contacting us!</h1>
         </section>
     </main>
 
